@@ -1,15 +1,15 @@
 <div class="header">
   <ul>
-    <li><a href="#">首页</a></li>
-    <li><a href="#">账户管理</a></li>
-    <li><a href="#">报表管理</a></li>
-    <li><a href="#">客户端</a></li>
+    <li><a [routerLink]="['/home']">首页</a></li>
+    <li><a [routerLink]="['/personal-center']">账户管理</a></li>
+    <li><a [routerLink]="['/personal-center/personal-report']">报表管理</a></li>
+    <li><a [routerLink]="['/download']">客户端</a></li>
   </ul>
-  <a href="login.html" class="header-control logout">登出</a>
-  <a href="javascript:void(0);" class="header-control notice">消息</a>
-  <a href="javascript:void(0);" class="header-control getcash">提现</a>
-  <a href="javascript:void(0);" class="header-control zhuancash">转账</a>
-  <a href="javascript:void(0);" class="header-control chongcash">充值</a>
-  <a href="javascript:void(0);" class="header-control last">余额 0.00</a>
-  <a href="javascript:void(0);" class="header-control">欢迎：guester</a>
+  <a [routerLink]="['/home']" class="header-control logout">登出</a>
+  <a [routerLink]="['/personal-center/news-bulletin']"  class="header-control notice">消息</a>
+  <a [routerLink]="['/personal-center']"  class="header-control getcash">提现</a>
+  <a [routerLink]="['/personal-center']"  class="header-control zhuancash">转账</a>
+  <a [routerLink]="['/personal-center']"  class="header-control chongcash">充值</a>
+  <a [routerLink]="['/personal-center']"  class="header-control last">余额 0.00</a>
+  <a [routerLink]="['/personal-center']"  class="header-control">欢迎：guester</a>
 </div>

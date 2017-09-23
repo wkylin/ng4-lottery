@@ -6,10 +6,10 @@
         <img src="../../assets/home/floatimgTop.png" class="phone-fix-content-img"/>
         <div class="phone-fix-content-middle">
             <ul>
-                <li><a href="javascript:void(0);">我要投诉</a></li>
-                <li><a href="javascript:void(0);">联系客服</a></li>
-                <li><a href="APP.html">APP下载</a></li>
-                <li><a href="xianlu.html">线路切换</a></li>
+                <li><a [routerLink]="['/home']">我要投诉</a></li>
+                <li><a [routerLink]="['/home']">联系客服</a></li>
+                <li><a [routerLink]="['/download']">APP下载</a></li>
+                <li><a [routerLink]="['/geographic-map']">线路切换</a></li>
             </ul>
             <div (click)="phoneFixCancel()" class="phone-fix-content-cancel">取消</div>
         </div>

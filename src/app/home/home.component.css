@@ -57,7 +57,7 @@
     text-decoration: none;
 }
 
-.nav ul li.active a:link, .nav ul li.active a:visited {
+.nav ul li a.active:link {
     background: url("images/navBg.jpg") no-repeat 0 0;
     background-size: 100% 100%;
 }

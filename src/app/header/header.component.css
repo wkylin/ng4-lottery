@@ -36,6 +36,7 @@
 
 .header ul li a:hover {
     color: #069;
+    text-decoration: none;
 }
 
 .header-control, .header-control:link, .header-control:visited {
@@ -48,6 +49,7 @@
 
 .header-control:hover {
     color: #069;
+    text-decoration: none;
 }
 
 .logout {

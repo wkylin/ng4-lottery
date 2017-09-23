@@ -1,0 +1,343 @@
+.personal-con {
+    width: 1120px;
+    margin: auto;
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+.personal-con h2.title {
+    background: url(images/personaltit.png) no-repeat;
+    border-bottom: solid 2px #666;
+    margin: 50px 0 20px;
+    padding: 0 10px 10px 50px;
+    font-size: 24px
+}
+
+.rgTab {
+    margin: 0 auto;
+}
+
+.btnTabs {
+    margin-left: 1px;
+    border-bottom: solid 1px #ccc
+}
+
+.btnTabs b, .btnTabs a {
+    float: left;
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+    padding: 0 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    background: #eee;
+    border: 1px solid #dedede;
+    margin-left: -1px;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.btnTabs li {
+    float: left;
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+    padding: 0 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.btnTabs b.on, .btnTabs a.on {
+    background: #ff9f15;
+    color: #fff;
+    border: solid 1px #ff9f15
+}
+
+.btnTabs li.on, .btnTabs li:hover {
+    background: none;
+    border-bottom: solid 2px #ff9f15
+}
+
+.personal-con .mc-con p {
+    display: block;
+    overflow: hidden;
+    font-size: 16px;
+    margin: 20px 0;
+    border-bottom: solid 1px #ccc;
+    padding-bottom: 10px;
+}
+
+.cw-con .mc-con strong {
+    font-size: 40px;
+    font-weight:normal;
+}
+.showBox2 {
+    border: none;
+    display: none
+}
+
+.showBox1, .showBox3 {
+    overflow: hidden;
+    display: none;
+    border: 1px solid #ff9f15;
+    margin-top: -1px;
+    padding: 10px 0 10px 0;
+    margin-top: -1px
+}
+
+
+.sec-con {
+    overflow: hidden;
+    padding: 30px 0 50px
+}
+
+.payway {
+    margin: 0;
+    padding: 20px;
+    overflow: hidden
+}
+
+.payway span {
+    line-height: 36px;
+    font-size: 16px;
+    margin-right: 30px
+}
+
+.payway .payicon {
+    overflow: hidden;
+    float: left
+}
+
+.payway .payicon a {
+    display: inline-block;
+    float: left;
+    margin-right: 20px
+}
+
+.payway .payicon a img {
+    max-width: 100%;
+    width: 88px;
+    height: 34px;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    padding: 2px
+}
+
+.payway .payicon input {
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    padding: 0 10px;
+    margin-right: 10px
+}
+
+.payway .selectpayway .selected, .bankicon a.cur {
+    border: solid 1px red
+}
+
+.zfbzwy {
+    display: block;
+    position: relative;
+    padding-left: 40px
+}
+
+.zfbzwy i {
+    width: 10px;
+    height: 10px;
+    background-color: #ff9f15;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    left: 20px;
+    top: 12px
+}
+
+.bankicon a {
+    display: inline-block;
+    width: 120px;
+    height: 36px;
+    margin-bottom: 10px;
+    background: url(images/ui-bank.png) no-repeat;
+    border: solid 1px #ccc;
+    border-radius: 5px
+}
+
+.bankicon a.icbcbank {
+    background-position: 0 -540px
+}
+
+.bankicon a.ccbbank {
+    background-position: 0 -144px
+}
+
+.bankicon a.bcombank {
+    background-position: 0 -324px
+}
+
+.bankicon a.bocbank {
+    background-position: 0 -72px
+}
+
+.bankicon a.cmbbank {
+    background-position: 0 -252px
+}
+
+.bankicon a.cmbcbank {
+    background-position: 0 -288px
+}
+
+.bankicon a.cebbbank {
+    background-position: 0 -180px
+}
+
+.bankicon a.bobbank {
+    background-position: 0 -36px
+}
+
+.bankicon a.shbbank {
+    background-position: 0 -828px
+}
+
+.bankicon a.nbbbank {
+    background-position: 0 -684px
+}
+
+.bankicon a.hxbbank {
+    background-position: 0 -468px
+}
+
+.bankicon a.cibbank {
+    background-position: 0 -1044px
+}
+
+.bankicon a.psbcbank {
+    background-position: 0 -756px
+}
+
+.bankicon a.spabank {
+    background-position: 0 -864px
+}
+
+.bankicon a.spdbbank {
+    background-position: 0 -900px
+}
+
+.bankicon a.zxbank {
+    background-position: 0 -216px
+}
+
+.bankicon a.hzbbank {
+    background-position: 0 -503px
+}
+
+.bankicon a.gdbbank {
+    background-position: 0 -432px
+}
+
+.tab-tixian {
+    padding: 20px
+}
+
+.tab-tixian h2 {
+    font-size: 16px;
+    margin: 20px 0
+}
+
+.tab-tixian h2 em {
+    background-color: #ff9f15;
+    border-radius: 50%;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: 600;
+    margin-right: 5px;
+    color: #fff;
+    display: inline-block;
+    font-size:12px;
+}
+
+.table_qk {
+    background-color: #ccc;
+    width:100%;
+}
+
+.table_qk td {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border:1px solid #eee;
+}
+
+.tixianform span {
+    font-size: 16px;
+    margin: 0 0 10px
+}
+
+.tixianform input {
+    min-width: 260px;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    padding: 10px;
+    margin-bottom: 30px
+}
+
+.tixianform .tixian-btn {
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin: 0 0 30px;
+    line-height: 30px;
+    border-radius: 20px;
+    background-color: #ff9f15;
+    color: #fff;
+    text-align: center
+}
+
+.tab-tixian .tx-table td {
+    padding: 10px 60px;
+    font-size: 16px
+}
+
+.tixianwrap {
+    width: 1120px;
+    position: relative;
+    font-size: 16px;
+    margin: 30px auto;
+    border-radius: 10px;
+    border: solid 1px #ccc;
+    padding: 10px
+}
+
+.tixianwrap span {
+    display: inline-block;
+    margin-right: 100px
+}
+
+.tixianwrap span a {
+    display: inline-block;
+    margin-left: 50px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.tixianwrap span a.cun {
+    background-color: #d31a34;
+    color: #fff
+}
+
+.tixianwrap span a.qu {
+    background-color: #2d97dd;
+    color: #fff
+}
+
+.shua {
+    position: absolute;
+    right: 13px;
+    top: 13px;
+    bottom: 0;
+}

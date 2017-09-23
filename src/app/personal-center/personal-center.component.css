@@ -91,7 +91,9 @@
     margin: auto;
     overflow: hidden
 }
-
+.personal-navmid ul{
+    margin-bottom:0;
+}
 .personal-navmid li {
     float: left;
     width: 180px;

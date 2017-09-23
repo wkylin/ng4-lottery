@@ -88,11 +88,15 @@
     font-size: 16px
 }
 
-.menu > ul > li:hover, .menu > ul > li.active {
+.menu > ul > li:hover{
     background: url(images/navBg.jpg) no-repeat;
     background-size: 100% 100%
 }
 
+.menu > ul > li a.active {
+    background: url(images/navBg.jpg) no-repeat;
+    background-size: 100% 100%
+}
 .menu > ul > li:hover a {
     opacity: 1;
     color: #fff

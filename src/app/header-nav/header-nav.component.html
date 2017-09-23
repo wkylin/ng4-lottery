@@ -2,8 +2,8 @@
     <div class="nav-mid">
         <div class="menu">
             <ul>
-                <li><a href="index.html">网站首页</a></li>
-                <li><a href="price.html">彩票游戏</a>
+                <li><a [routerLink]="['/home']" routerLinkActive="active">网站首页</a></li>
+                <li><a [routerLink]="['/other']" routerLinkActive="active">彩票游戏</a>
                     <ul>
                         <li>
                             <div class="menu-header">
@@ -69,12 +69,12 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="#">真人视讯</a></li>
-                <li><a href="#">电子游戏</a></li>
-                <li><a href="#">活动优惠</a></li>
-                <li><a href="#">个人中心</a></li>
-                <li><a href="#">在线客服</a></li>
-                <li><a href="#">新手帮助</a></li>
+                <li><a [routerLink]="['/other']" routerLinkActive="active">真人视讯</a></li>
+                <li><a [routerLink]="['/other']" routerLinkActive="active"href="#">电子游戏</a></li>
+                <li><a [routerLink]="['/other']" routerLinkActive="active"href="#">活动优惠</a></li>
+                <li><a [routerLink]="['/personal-center']" routerLinkActive="active"href="#">个人中心</a></li>
+                <li><a [routerLink]="['/other']" routerLinkActive="active"href="#">在线客服</a></li>
+                <li><a [routerLink]="['/other']" routerLinkActive="active"href="#">新手帮助</a></li>
             </ul>
         </div>
     </div>

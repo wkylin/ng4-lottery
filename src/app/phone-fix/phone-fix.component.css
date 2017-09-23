@@ -59,11 +59,13 @@
     text-align: center;
     font-size: 12px;
     background: #fff;
+    text-decoration: none;
 }
 
 .phone-fix-content-middle ul li a:hover {
     background: #069;
     color: #fff;
+    text-decoration: none;
 }
 
 .phone-fix-content-img {
