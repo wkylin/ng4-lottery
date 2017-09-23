@@ -1,0 +1,150 @@
+.personal-user {
+    background: url(images/personaltop.jpg) no-repeat center #edecf1
+}
+
+.personal-usermid {
+    width: 1120px;
+    margin: auto;
+    padding: 100px 0;
+    text-align: center
+}
+
+.personal-usermid .userpic {
+    display: inline-block
+}
+
+.personal-usermid .userpic img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: solid 2px #ccc
+}
+
+.personal-usermid .info {
+    font-size: 16px;
+    display: inline-block;
+    margin-left: 20px;
+    text-align: left
+}
+
+.personal-usermid .userdone, .personal-usermid .zhuangtai {
+    margin-top: 10px
+}
+
+.personal-usermid .userdone .jindu {
+    display: inline-block;
+    width: 300px;
+    height: 15px;
+    margin-right: 20px;
+    background-color: #ccc;
+    position: relative;
+    border-radius: 50px
+}
+
+.personal-usermid .userdone .jindu em {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #ff9f15;
+    border-radius: 50px
+}
+
+.personal-usermid .userdone span em {
+    font-size: 20px;
+    font-style: oblique;
+    font-weight: bold;
+    color: #fc3804;
+    margin-left: 5px
+}
+
+.zhuangtai a {
+    padding: 5px 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+    background-color: #ff9f15;
+    color: #fff
+}
+
+.personal-nav {
+    background-color: #e3e3e3
+}
+
+.personal-con {
+    width: 1000px;
+    margin: auto;
+    padding: 30px 0;
+    overflow: hidden
+}
+
+.personal-con h2.title {
+    background: url(images/personaltit.png) no-repeat;
+    border-bottom: solid 2px #666;
+    margin: 50px 0 20px;
+    padding: 0 10px 10px 50px;
+    font-size: 24px
+}
+
+.personal-navmid {
+    width: 1120px;
+    margin: auto;
+    overflow: hidden
+}
+
+.personal-navmid li {
+    float: left;
+    width: 180px;
+    text-align: center
+}
+
+.personal-navmid li a {
+    padding: 10px 0;
+    display: block;
+    font-size: 16px;
+    text-decoration:none;
+}
+
+.personal-navmid li a.active, .personal-navmid li a:hover {
+    border-bottom: solid 2px #ff9f15;
+    background-color: #fff;
+    color: #333
+}
+
+.personal-navmid li a i {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    background: url(images/personalnav.png) no-repeat;
+    background-size: 100%
+}
+
+.personal-navmid li a i.caiwu {
+    background-position: 0 -26px
+}
+
+.personal-navmid li a i.jiaoyi {
+    background-position: 0 -52px
+}
+
+.personal-navmid li a i.geren {
+    background-position: 0 -78px
+}
+
+.personal-navmid li a i.xiaoxi {
+    background-position: 0 -104px
+}
+
+.personal-navmid li a i.daili {
+    background-position: 0 -130px
+}
+
+.personal-con .mc-con p {
+    display: block;
+    overflow: hidden;
+    font-size: 16px;
+    margin: 20px 0;
+    border-bottom: solid 1px #ccc;
+    padding-bottom: 10px
+}

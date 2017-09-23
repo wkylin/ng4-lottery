@@ -1,0 +1,88 @@
+.footer {
+    background: url(images/footbg.png) no-repeat center bottom #e3e3e3;
+    height: 300px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background-size: 100% 100%
+}
+
+.foot {
+    width: 1200px;
+    margin: auto;
+    padding-top: 65px;
+    overflow: hidden;
+    font-size: 16px
+}
+
+.foot_div {
+    float: left;
+    margin-left: 20px;
+    height: 120px;
+}
+
+.foot_div ul li {
+    line-height: 1.5
+}
+
+.foot_div h4 strong {
+    border-bottom: solid 3px #ce2e5f;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.foot .list_fll li {
+    float: left;
+    width: 68px;
+    color: #999
+}
+
+.foot_bottom {
+    float: left;
+    position: relative;
+    bottom: 0;
+    height: 20px;
+    border-top: 1px solid #666;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.flink {
+    float: left;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0
+}
+
+.flink img {
+    margin: auto
+}
+
+.foot .hy {
+    width: 15.1%;
+    border-right: solid 1px #ccc
+}
+
+.foot .contact {
+    width: 40%;
+    border-right: solid 1px #ccc
+}
+
+.foot .contact .list_fll li {
+    width: 50%;
+    padding: 20px 0
+}
+
+.foot .contact .list_fll li span {
+    float: left;
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    background: url(images/contact.png) no-repeat
+}
+
+.foot .contact .list_fll li span.mail {
+    background-position: -45px 0
+}

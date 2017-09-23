@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div class="page-app">
+    <app-header-nav></app-header-nav>
+    
+    <div class="personal">
+        <div class="personal-user">
+            <div class="personal-usermid">
+                <div class="userpic"><img src="../../assets/personal-center/user.jpg"></div>
+                <div class="info">
+                    <div class="welusername">晚上好，178yule002！</div>
+                    <div class="userdone">
+                        <span class="jindu"><em style="width:70%"></em></span>
+                        <span>资料完善度<em>20%</em></span>
+                    </div>
+                    <div class="zhuangtai">账户状态：正常 <a href="#jump">完善资料</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="personal-nav">
+        <div class="personal-navmid">
+            <ul class="clearfix">
+                <li><a [routerLink]="['./my-account']" routerLinkActive="active"><i class="mine block"></i>我的账户</a></li>
+                <li><a [routerLink]="['./financial-center']" routerLinkActive="active"><i class="caiwu block"></i>财务中心</a></li>
+                <li><a [routerLink]="['./transaction-history']" routerLinkActive="active"><i class="jiaoyi block"></i>交易记录</a></li>
+                <li><a [routerLink]="['./personal-report']" routerLinkActive="active"><i class="geren block"></i>个人报表</a></li>
+                <li><a [routerLink]="['./news-bulletin']" routerLinkActive="active"><i class="xiaoxi block"></i>消息公告</a></li>
+                <li><a [routerLink]="['./agent-center']" routerLinkActive="active"><i class="daili block"></i>代理中心</a></li>
+            </ul>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>
+
+<app-footer></app-footer>
+
+<app-phone-fix></app-phone-fix>

@@ -1,0 +1,119 @@
+
+
+.app-nav {
+    width: 100%;
+    background-color: #2c3135;
+    height: 80px
+}
+
+.page-app .menu {
+    height: 80px
+}
+
+.nav-mid {
+    width: 1200px;
+    margin: auto
+}
+
+.page-app .app-banner {
+    background-color: #e3e3e3;
+    overflow: hidden
+}
+
+.page-app .app-banner-mid {
+    width: 1200px;
+    margin: auto
+}
+
+.page-app .app-banner-mid-left {
+    float: left;
+    margin-top: 200px
+}
+
+.page-app .app-banner-mid-left  a {
+    display: block;
+    width: 60%;
+    margin: 20px auto;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ff9f16;
+    color: #fff;
+    font-size: 18px
+}
+
+.page-app .app-banner-mid-left a:hover {
+    opacity: .8;
+    text-decoration: none;
+}
+
+.page-app .app-banner-mid-left a .and {
+    display: inline-block;
+    width: 26px;
+    height: 40px;
+    margin-right: 10px;
+    margin-left: 5px;
+    background: url(images/downicon.png) 3px 5px no-repeat;
+    background-size: 200%;
+    vertical-align: middle
+}
+
+.page-app .app-banner-mid-left a .ios {
+    display: inline-block;
+    width: 26px;
+    height: 40px;
+    margin-right: 10px;
+    margin-left: 5px;
+    background: url(images/downicon.png) -27px 4px no-repeat;
+    background-size: 200%;
+    vertical-align: middle
+}
+
+.page-app .app-banner-mid-right {
+    float: right
+}
+
+.page-app .app-banner-mid-right img {
+    width: 700px;
+    margin: 50px 0
+}
+
+.page-app .step img {
+    width: 80%;
+    margin: auto
+}
+
+.step {
+    overflow: hidden;
+    padding: 0 10%;
+    margin-bottom:30px;
+}
+
+.app-text {
+    width: 1200px;
+    margin: 50px auto
+}
+
+.app-title {
+    height: 58px;
+    background: url(images/tsjs-tit.png) no-repeat;
+    padding: 5px 0 5px 100px;
+    font-size: 24px
+}
+
+.app-pro h2 {
+    line-height: 2;
+    font-size: 22px;
+    margin: 30px 0;
+    font-weight: bold
+}
+
+.step-info {
+    width: 25%;
+    float: left;
+    text-align: center
+}
+
+.step-info span {
+    font-size: 18px;
+    line-height: 2
+}
