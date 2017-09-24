@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 declare let $: any;
 
@@ -12,7 +12,16 @@ export class HomeComponent implements OnInit {
     constructor() {
     }
 
-    ngOnInit() {
+    fullPageInit() {
+        $('#flower').fullpage({
+            resize: false,
+            'navigation': true
+        });
     }
-
+    ngOnInit() {
+        this.fullPageInit();
+    }
+    ngOnDestroy() {
+        $('#fp-nav').remove();
+    }
 }

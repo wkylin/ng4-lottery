@@ -24,7 +24,8 @@
       ],
       "scripts": [
         "../node_modules/_jquery@3.2.1@jquery/dist/jquery.min.js",
-        "../node_modules/_bootstrap@3.3.7@bootstrap/dist/js/bootstrap.min.js"
+        "../node_modules/_bootstrap@3.3.7@bootstrap/dist/js/bootstrap.min.js",
+        "../src/assets/libs/jquery.fullPage.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
