@@ -278,7 +278,8 @@
     color: #000000;
     float: left;
     margin: 0px 5px 10px 5px;
-    cursor: pointer
+    cursor: pointer;
+    text-decoration:none;
 }
 
 .numinfo select {
@@ -526,7 +527,7 @@
 }
 
 .spinner .decrease[disabled] {
-    cursor: default
+    cursor: default;
 }
 
 .spinner .increase {
@@ -544,11 +545,11 @@
 
 .spinner .value.passive {
     color: #919191;
-    border: solid 1px #ddd
+    border: solid 1px #ddd;
 }
 
 .spinner .error, .spinner .invalid {
-    background: #aa0000
+    background: #aa0000;
 }
 .select{
     background-color: #fff;

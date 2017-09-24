@@ -112,19 +112,24 @@
     float: left
 }
 
-.payway .payicon a {
+.payway .payicon .selectpayway {
     display: inline-block;
     float: left;
-    margin-right: 20px
+    margin-right: 20px;
+    cursor:pointer;
 }
 
-.payway .payicon a img {
+.payway .payicon .selectpayway img {
     max-width: 100%;
     width: 88px;
     height: 34px;
     border: solid 1px #ccc;
     border-radius: 5px;
     padding: 2px
+}
+
+.payway .payicon .selectpayway.selected img{
+    border: solid 1px red;
 }
 
 .payway .payicon input {
@@ -134,8 +139,8 @@
     margin-right: 10px
 }
 
-.payway .selectpayway .selected, .bankicon a.cur {
-    border: solid 1px red
+.bankicon .cur {
+    border: solid 1px red;
 }
 
 .zfbzwy {
@@ -155,85 +160,86 @@
     top: 12px
 }
 
-.bankicon a {
+.bankicon .bank-item {
     display: inline-block;
     width: 120px;
     height: 36px;
     margin-bottom: 10px;
     background: url(images/ui-bank.png) no-repeat;
     border: solid 1px #ccc;
-    border-radius: 5px
+    border-radius: 5px;
+    cursor:pointer;
 }
 
-.bankicon a.icbcbank {
+.bankicon .icbcbank {
     background-position: 0 -540px
 }
 
-.bankicon a.ccbbank {
+.bankicon .ccbbank {
     background-position: 0 -144px
 }
 
-.bankicon a.bcombank {
+.bankicon .bcombank {
     background-position: 0 -324px
 }
 
-.bankicon a.bocbank {
+.bankicon .bocbank {
     background-position: 0 -72px
 }
 
-.bankicon a.cmbbank {
+.bankicon .cmbbank {
     background-position: 0 -252px
 }
 
-.bankicon a.cmbcbank {
+.bankicon .cmbcbank {
     background-position: 0 -288px
 }
 
-.bankicon a.cebbbank {
+.bankicon .cebbbank {
     background-position: 0 -180px
 }
 
-.bankicon a.bobbank {
+.bankicon .bobbank {
     background-position: 0 -36px
 }
 
-.bankicon a.shbbank {
+.bankicon .shbbank {
     background-position: 0 -828px
 }
 
-.bankicon a.nbbbank {
+.bankicon .nbbbank {
     background-position: 0 -684px
 }
 
-.bankicon a.hxbbank {
+.bankicon .hxbbank {
     background-position: 0 -468px
 }
 
-.bankicon a.cibbank {
+.bankicon .cibbank {
     background-position: 0 -1044px
 }
 
-.bankicon a.psbcbank {
+.bankicon .psbcbank {
     background-position: 0 -756px
 }
 
-.bankicon a.spabank {
+.bankicon .spabank {
     background-position: 0 -864px
 }
 
-.bankicon a.spdbbank {
+.bankicon .spdbbank {
     background-position: 0 -900px
 }
 
-.bankicon a.zxbank {
+.bankicon .zxbank {
     background-position: 0 -216px
 }
 
-.bankicon a.hzbbank {
+.bankicon .hzbbank {
     background-position: 0 -503px
 }
 
-.bankicon a.gdbbank {
+.bankicon .gdbbank {
     background-position: 0 -432px
 }
 
