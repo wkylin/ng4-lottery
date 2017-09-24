@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
         this.fullPageInit();
     }
     ngOnDestroy() {
+        $('html,body').removeAttr('style').removeAttr('class');
         $('#fp-nav').remove();
     }
 }
