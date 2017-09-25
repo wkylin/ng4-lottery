@@ -17,6 +17,7 @@ import { AgentCenterComponent } from './agent-center/agent-center.component';
 import { RegisterComponent } from './register/register.component';
 import { RechargeCashComponent } from './recharge-cash/recharge-cash.component';
 import { WithdrawCashComponent } from './withdraw-cash/withdraw-cash.component';
+import { LotteryPlayDetailComponent } from './lottery-play-detail/lottery-play-detail.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -27,7 +28,13 @@ const routes: Routes = [
     {path: 'red-envelope', component: RedEnvelopeComponent},
     {path: 'geographic-map', component: GeographicMapComponent},
     {path: 'price-tag', component: PriceTagComponent},
-    {path: 'lottery-play', component: LotteryPlayComponent},
+    {
+        path: 'lottery-play', component: LotteryPlayComponent,
+        children: [
+            {path: '', redirectTo: 'lottery/1', pathMatch: 'full'},
+            {path: 'lottery/:id', component: LotteryPlayDetailComponent},
+        ]
+    },
     {
         path: 'personal-center', component: PersonalCenterComponent,
         children: [

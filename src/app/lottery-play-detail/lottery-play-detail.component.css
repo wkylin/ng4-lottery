@@ -1,0 +1,414 @@
+.djs-wrap {
+    width: 100%;
+    height: 120px;
+    padding: 20px 0
+}
+
+.djs-wrap .djs {
+    width: 24%;
+    float: left;
+    padding-left: 5px;
+}
+
+.djs-wrap .djs .jiezhi {
+    margin-bottom: 15px
+}
+
+.djs-wrap .haoma {
+    width: 52%;
+    float: left;
+}
+
+.djs-wrap .haoma .caipic {
+    margin-top: -10px
+}
+
+.djs-wrap .lishi {
+    width: 24%;
+    float: left;
+    padding: 0 5px;
+    text-align: center
+}
+
+.djs-wrap .lishi a {
+    display: inline-block;
+    width: 40%;
+    margin: 10px 5px;
+    border-radius: 5px;
+    background-color: #ee5b9d;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.timer span {
+    font-size: 35px;
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    border: solid 1px #ccc;
+    background: url(images/yx_bigO.png) no-repeat center;
+    text-align: center;
+    line-height: 55px;
+    margin: 15px 5px 0 10px
+}
+
+.haomawrap {
+    width: 100%;
+    min-height: 220px;
+    background-color: #fff;
+    border-top: solid 1px #eee;
+    padding-top: 20px
+}
+
+.selectnumlist {
+    overflow: hidden;
+    margin-bottom: 10px
+}
+
+.selectnum {
+    float: left;
+    width: 520px;
+    margin-left: 20px
+}
+
+.numberRow .nrTitle {
+    float: left;
+    width: 50px;
+}
+
+.numberRow .rowNumber {
+    height: 42px;
+}
+
+.numberRow .nrTitle .rowNumber a {
+    background-color: #ee5b9d;
+    height: 20px;
+    width: 50px;
+    font-size: 12px;
+    line-height: 20px;
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    position: relative;
+    margin-top: 10px;
+}
+
+.numberRow .nrTitle .rowNumber a i {
+    position: absolute;
+    right: -14px;
+    top: 0px;
+    width: 0px;
+    height: 0px;
+    display: block;
+    border-top: 10px solid transparent;
+    border-left: 14px solid #ee5b9d;
+    border-bottom: 10px solid transparent;
+}
+
+.numberRow .nrTitle .rowNumber a i em {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #FFFFFF;
+    position: absolute;
+    border-radius: 50%;
+    left: -13px;
+    top: -2px;
+}
+
+.selectnum a {
+    width: 42px;
+    height: 42px;
+    border: 1px solid #dedede;
+    display: block;
+    line-height: 42px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 50%;
+    color: #000000;
+    float: left;
+    margin: 0px 5px 10px 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.numinfo select {
+    width: 60px;
+    margin-left: 10px
+}
+
+.selectnum a.active {
+    background-color: #ee5b9d;
+    color: #fff
+}
+
+.haomawrap .selectrowNumber {
+    float: right;
+    width: 260px;
+    height: 42px;
+    margin-left: 15px;
+}
+
+.haomawrap .selectrowNumber a {
+    border: 1px solid #dedede;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    display: block;
+    float: left;
+    margin: 0px 3px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.ofynum {
+    width: 610px;
+    height: 180px;
+    float: left;
+    overflow-y: auto;
+    margin-bottom: 30px;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    padding: 10px
+}
+
+.ofynum .activenum {
+    margin-bottom: 10px;
+    border-bottom: dotted 1px #ccc;
+    padding-bottom: 10px;
+    color: #888;
+    font-size: 12px
+}
+
+.touzhu {
+    float: left;
+    width: 200px;
+    text-align: center
+}
+
+.touzhu img {
+    display: inline-block;
+    margin-top: 30px
+}
+
+.result span {
+    padding: 0 10px
+}
+
+.wanfa-btn {
+    margin: 10px 0
+}
+
+.wanfa-btn a {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #ee5b9d;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: #fff;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.tab {
+    margin: 0 0 0 5px;
+}
+
+.tab-hd {
+    width: 580px;
+    background: #ee5b9d;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.tab-hd li {
+    float: left;
+    color: #fff;
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px
+}
+
+.tab-hd li.active {
+    background: #eee;
+    color: #333
+}
+
+.tab-bd li {
+    display: none;
+    border-top: 0 none
+}
+
+.tab-bd li.thisclass {
+    display: list-item;
+}
+
+.myplantab {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 285px;
+}
+
+.myplantab .tab-hd {
+    width: 100%
+}
+
+.myplantab .tab-hd li {
+    float: left;
+    width: 33.333333%;
+    text-align: center
+}
+
+.thisclasscon {
+    position: relative;
+    background-color: #fff;
+    overflow: hidden
+}
+
+.myplantab .thisclasscon .thisclasscon-tit {
+    height: 40px;
+    overflow: hidden;
+    background-color: #eee
+}
+
+.myplantab .thisclasscon span {
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 0
+}
+
+.myplantab .planul {
+    height: 220px;
+    background-color: #fff
+}
+
+.myplantab .planul .col-xs-6 {
+    padding: 10px 0
+}
+
+.shaixuan {
+    width: 580px;
+    height: 220px;
+    overflow: hidden;
+    background-color: #eee
+}
+
+.cptishi {
+    width: 600px;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    background-color: #fff
+}
+
+.shaixuan .sxlabel {
+    float: left;
+    width: 80px;
+    text-align: right;
+    line-height: 30px
+}
+
+.shaixuan .sxbox {
+    margin: 15px 0;
+    overflow: hidden
+}
+
+.sxfield {
+    width: 500px;
+    float: left
+}
+
+.sxfield span {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    margin-right: 20px;
+    line-height: 30px;
+    cursor: pointer
+}
+
+.sxfield span.active {
+    background-color: #ee5b9d;
+    color: #fff;
+    width: 100px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px
+}
+
+.spinner {
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    *zoom: 1;
+}
+
+.spinner button, .spinner .value {
+    text-align: center;
+    display: block;
+    float: left;
+    height: 100%;
+    line-height: 25px;
+    margin: 0
+}
+
+.spinner button {
+    border: none;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 100%;
+    background-color: #ee5b9d;
+    color: #fff;
+    padding: 0;
+    outline: none;
+    font-weight: bold;
+    font-size: 18px
+}
+
+.spinner .decrease {
+    cursor: pointer;
+    margin: 0 10px 0 20px
+}
+
+.spinner .decrease[disabled] {
+    cursor: default;
+}
+
+.spinner .increase {
+    cursor: pointer;
+    margin: 0 5px 0 10px
+}
+
+.spinner .value {
+    width: 40px;
+    height: 29px;
+    font-family: Arial;
+    color: #333;
+    padding: 0px
+}
+
+.spinner .value.passive {
+    color: #919191;
+    border: solid 1px #ddd;
+}
+
+.spinner .error, .spinner .invalid {
+    background: #aa0000;
+}
+
+.select {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 3px;
+    margin-right: 5px;
+}

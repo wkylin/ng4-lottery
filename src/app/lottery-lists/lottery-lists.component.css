@@ -1,0 +1,93 @@
+
+.caipiao-leftbar dl {
+    margin: 0
+}
+
+.glyphicon-chevron-down:before {
+    content: "\e114";
+}
+
+.list_dt {
+    background: #ee5b9d;
+    color: white;
+    padding: 0 40px 0 20px;
+    height: 45px;
+    line-height: 45px;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+    border-bottom: 1px solid #464646;
+}
+
+.list_dt:hover {
+    opacity: .9
+}
+
+.list_dt:hover ._after {
+    display: block;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #4285F4;
+}
+
+#open {
+    background: #ee5b9d;
+}
+
+#open ._after {
+    display: block;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #4285F4;
+}
+
+.list_dt_icon {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+#open .list_dt_icon.glyphicon-chevron-down:before {
+    content: "\e113";
+}
+
+.list_dd {
+    display: none;
+}
+
+.list_li {
+    background: #F5F5F5;
+    list-style-type: none;
+    color: #333;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    border-bottom: 1px solid #6b6b6b;
+}
+
+.list_li a,
+.list_li a:hover{
+    text-decoration: none;
+    display:block;
+    padding: 0 30px;
+}
+
+.list_li a:hover,
+.list_li a.active{
+    background: #ee5b9d;
+    color: #fff;
+}
+.fn-show{
+    display:block;
+}
