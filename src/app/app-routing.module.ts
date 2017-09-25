@@ -14,10 +14,14 @@ import { TransactionHistoryComponent } from './transaction-history/transaction-h
 import { PersonalReportComponent } from './personal-report/personal-report.component';
 import { NewsBulletinComponent } from './news-bulletin/news-bulletin.component';
 import { AgentCenterComponent } from './agent-center/agent-center.component';
+import { RegisterComponent } from './register/register.component';
+import { RechargeCashComponent } from './recharge-cash/recharge-cash.component';
+import { WithdrawCashComponent } from './withdraw-cash/withdraw-cash.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/login', pathMatch: 'full'},
     {path: 'login', component: LoginComponent},
+    {path: 'register', component: RegisterComponent},
     {path: 'home', component: HomeComponent},
     {path: 'download', component: DownloadComponent},
     {path: 'red-envelope', component: RedEnvelopeComponent},
@@ -29,7 +33,14 @@ const routes: Routes = [
         children: [
             {path: '', redirectTo: 'my-account', pathMatch: 'full'},
             {path: 'my-account', component: MyAccountComponent},
-            {path: 'financial-center', component: FinancialCenterComponent},
+            {
+                path: 'financial-center', component: FinancialCenterComponent,
+                children: [
+                    {path: '', redirectTo: 'recharge-cash', pathMatch: 'full'},
+                    {path: 'recharge-cash', component: RechargeCashComponent},
+                    {path: 'withdraw-cash', component: WithdrawCashComponent}
+                    ]
+            },
             {path: 'transaction-history', component: TransactionHistoryComponent},
             {path: 'personal-report', component: PersonalReportComponent},
             {path: 'news-bulletin', component: NewsBulletinComponent},

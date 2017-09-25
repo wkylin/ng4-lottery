@@ -21,6 +21,9 @@ import { TransactionHistoryComponent } from './transaction-history/transaction-h
 import { PersonalReportComponent } from './personal-report/personal-report.component';
 import { NewsBulletinComponent } from './news-bulletin/news-bulletin.component';
 import { AgentCenterComponent } from './agent-center/agent-center.component';
+import { RegisterComponent } from './register/register.component';
+import { WithdrawCashComponent } from './withdraw-cash/withdraw-cash.component';
+import { RechargeCashComponent } from './recharge-cash/recharge-cash.component';
 
 @NgModule({
     declarations: [
@@ -42,7 +45,10 @@ import { AgentCenterComponent } from './agent-center/agent-center.component';
         TransactionHistoryComponent,
         PersonalReportComponent,
         NewsBulletinComponent,
-        AgentCenterComponent
+        AgentCenterComponent,
+        RegisterComponent,
+        WithdrawCashComponent,
+        RechargeCashComponent
     ],
     imports: [
         BrowserModule,

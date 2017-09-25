@@ -1,0 +1,79 @@
+/* login */
+.lobg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url(images/lgbg.jpg) center top no-repeat
+}
+
+.lobg .lgform {
+    width: 600px;
+    height: 556px;
+    overflow: hidden;
+    margin: auto;
+    background: url(images/lgformbg.png) no-repeat center
+}
+
+.lobg .lgform .lgwrap {
+    width: 300px;
+    height: 300px;
+    margin: 140px 0 0 120px
+}
+
+.lobg .lgform .lgwrap h2 {
+    text-align: center;
+    margin-bottom: 20px
+}
+
+.lobg .lgform .lgwrap p {
+    margin-bottom: 15px
+}
+
+.lobg .lgform .lgwrap p.yzm input {
+    width: 80px;
+}
+
+.lobg .lgform .lgwrap p.yzm a {
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+}
+
+.lobg .lgform .lgwrap p.yzm img {
+    width: 78px;
+    height: 37px;
+    margin-left: 10px
+}
+
+.lobg .lgform .lgwrap p input {
+    border-radius: 5px;
+    border: solid 1px #ddd;
+    padding: 10px
+}
+
+.lobg .lgform .lgwrap label {
+    width: 80px;
+    display: inline-block;
+    text-align: right
+}
+
+.lobg .lgform .lgwrap .lgbtn {
+    display: block;
+    width: 140px;
+    height: 40px;
+    background: url(images/lgbtn.png) no-repeat center;
+    background-size: 100%;
+    text-align: center;
+    line-height: 40px;
+    margin: 20px auto 10px;
+    color: #b6a471;
+    font-size: 16px
+}
+
+.lobg .lgform .lgwrap .lgbtn:hover {
+    opacity: .8
+}
+
+.lobg .lgform a:hover {
+    text-decoration: none;
+}
