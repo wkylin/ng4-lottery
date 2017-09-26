@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +29,8 @@ import { RechargeCashComponent } from './recharge-cash/recharge-cash.component';
 import { LotteryPlayDetailComponent } from './lottery-play-detail/lottery-play-detail.component';
 import { LotteryListsComponent } from './lottery-lists/lottery-lists.component';
 import { NotFundComponent } from './not-fund/not-fund.component';
+
+
 
 @NgModule({
     declarations: [
@@ -58,7 +62,9 @@ import { NotFundComponent } from './not-fund/not-fund.component';
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

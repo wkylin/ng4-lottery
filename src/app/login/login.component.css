@@ -1,4 +1,3 @@
-
 /* login */
 .lobg {
     width: 100%;
@@ -31,13 +30,13 @@
 }
 
 .lobg .lgform .lgwrap p.yzm input {
-    width: 80px;
+    width: 120px;
 }
 
-.lobg .lgform .lgwrap p.yzm a {
+.lobg .lgform .lgwrap p.yzm span {
     display: inline-block;
     vertical-align: top;
-    text-decoration: none;
+    cursor:pointer;    
 }
 
 .lobg .lgform .lgwrap p.yzm img {
