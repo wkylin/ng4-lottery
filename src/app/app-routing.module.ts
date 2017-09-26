@@ -18,6 +18,7 @@ import { RegisterComponent } from './register/register.component';
 import { RechargeCashComponent } from './recharge-cash/recharge-cash.component';
 import { WithdrawCashComponent } from './withdraw-cash/withdraw-cash.component';
 import { LotteryPlayDetailComponent } from './lottery-play-detail/lottery-play-detail.component';
+import { NotFundComponent } from './not-fund/not-fund.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -53,11 +54,12 @@ const routes: Routes = [
             {path: 'news-bulletin', component: NewsBulletinComponent},
             {path: 'agent-center', component: AgentCenterComponent},
         ]
-    }
+    },
+    {path: '**', component: NotFundComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

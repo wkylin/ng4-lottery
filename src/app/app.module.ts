@@ -26,6 +26,7 @@ import { WithdrawCashComponent } from './withdraw-cash/withdraw-cash.component';
 import { RechargeCashComponent } from './recharge-cash/recharge-cash.component';
 import { LotteryPlayDetailComponent } from './lottery-play-detail/lottery-play-detail.component';
 import { LotteryListsComponent } from './lottery-lists/lottery-lists.component';
+import { NotFundComponent } from './not-fund/not-fund.component';
 
 @NgModule({
     declarations: [
@@ -52,7 +53,8 @@ import { LotteryListsComponent } from './lottery-lists/lottery-lists.component';
         WithdrawCashComponent,
         RechargeCashComponent,
         LotteryPlayDetailComponent,
-        LotteryListsComponent
+        LotteryListsComponent,
+        NotFundComponent
     ],
     imports: [
         BrowserModule,
