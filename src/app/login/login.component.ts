@@ -30,8 +30,6 @@ export class LoginComponent implements OnInit {
                 'username': $('.login-name').val(),
                 'password': $('.login-pwd').val(),
                 'vcode': $('.login-vcode').val()
-            }, {
-                headers: new HttpHeaders().set('HTTP_USER_AGENT', 'other'),
             })
             .subscribe(
                 data => {
