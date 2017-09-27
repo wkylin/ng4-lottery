@@ -15,7 +15,7 @@
 }
 
 .lobg .lgform .lgwrap {
-    width: 300px;
+    width: 305px;
     height: 300px;
     margin: 240px 0 0 120px
 }
@@ -30,7 +30,7 @@
 }
 
 .lobg .lgform .lgwrap p.yzm input {
-    width: 120px;
+    width: 110px;
 }
 
 .lobg .lgform .lgwrap p.yzm span {
@@ -40,8 +40,7 @@
 }
 
 .lobg .lgform .lgwrap p.yzm img {
-    width: 78px;
-    height: 37px;
+    width: 100px;
     margin-left: 10px
 }
 
