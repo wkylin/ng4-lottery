@@ -34,9 +34,11 @@
     border: 0;
 }
 
-.header ul li a:hover {
+.header ul li a:hover,
+.header ul li span:hover {
     color: #069;
     text-decoration: none;
+    cursor:pointer;
 }
 
 .header-control, .header-control:link, .header-control:visited {
@@ -45,17 +47,20 @@
     margin-right: 15px;
     line-height: 30px;
     color: #aa1f1f;
+    cursor:pointer;
 }
 
 .header-control:hover {
     color: #069;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .logout {
     padding-left: 30px !important;
     background: url(images/logout.png) no-repeat 0 center;
     background-size: 20px 20px;
+    cursor: pointer;
 }
 
 .notice {

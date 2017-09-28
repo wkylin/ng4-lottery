@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
             .subscribe(
                 data => {
                     if (data['errormsg'] === null) {
+                        sessionStorage.setItem('user_id', data['result']['user_id']);
                         this.router.navigateByUrl('personal-center');
                     } else {
                         swal(data['errormsg']);
