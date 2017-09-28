@@ -15,9 +15,9 @@
 }
 
 .lobg .lgform .lgwrap {
-    width: 305px;
+    width: 340px;
     height: 300px;
-    margin: 240px 0 0 120px
+    margin: 220px 0 0 120px
 }
 
 .lobg .lgform .lgwrap h2 {
@@ -40,7 +40,7 @@
 }
 
 .lobg .lgform .lgwrap p.yzm img {
-    width: 100px;
+    width: 105px;
     margin-left: 10px
 }
 
@@ -66,7 +66,8 @@
     line-height: 40px;
     margin: 20px auto 10px;
     color: #b6a471;
-    font-size: 16px
+    font-size: 16px;
+    cursor:pointer;
 }
 
 .lobg .lgform .lgwrap .lgbtn:hover {

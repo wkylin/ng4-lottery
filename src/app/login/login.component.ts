@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 declare let $: any;
+import swal from 'sweetalert2';
 
 @Component({
     selector: 'app-login',
@@ -11,28 +13,34 @@ declare let $: any;
 export class LoginComponent implements OnInit {
     captchaCode = '';
     api = 'http://47.52.143.236/api';
-    constructor(private http: HttpClient) {
+    
+    constructor(private http: HttpClient, private router: Router) {
     }
+    
     getCode() {
         this.http.get(`${this.api}/captcha/getCaptchaCode`, {responseType: 'text'}).subscribe(
-        // this.http.post('https://wz.91yaowang.com/app/webservice/v2/member/getCaptcha?timer=' + new Date().getTime(), {}).subscribe(
             data => {
-                this.captchaCode = 'data:image/png;base64,' + data['data'].captcha;
+                this.captchaCode = 'data:image/png;base64,' + JSON.parse(data).result.data;
             },
             err => {
-                console.log(err['error']['text']);
-                this.captchaCode = err['error']['text'];
+                console.log(JSON.parse(err).error.text);
             }
         );
     }
+    
     login() {
         this.http.post(`${this.api}/Users/login`, {
                 'username': $('.login-name').val(),
                 'password': $('.login-pwd').val(),
-                'vcode': $('.login-vcode').val()
+                'vcode': $('.login-vcode').val() || null
             })
             .subscribe(
                 data => {
+                    if (data['errormsg'] === null) {
+                        this.router.navigateByUrl('personal-center');
+                    } else {
+                        swal(data['errormsg']);
+                    }
                     console.log(data);
                 },
                 err => {
@@ -40,8 +48,9 @@ export class LoginComponent implements OnInit {
                 }
             );
     }
+    
     ngOnInit() {
         // this.login();
-        // this.getCode();
+        this.getCode();
     }
 }

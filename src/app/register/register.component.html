@@ -2,12 +2,11 @@
     <div class="lgform">
         <form>
             <div class="lgwrap">
-                <h2>注册</h2>
                 <p><label>会员注册：</label> <input class="input-name" name="username" type="text" placeholder="输入账号"></p>
                 <p><label>密码：</label> <input class="input-pwd" name="password" type="password" placeholder="请输入密码"></p>
                 <p><label>确认密码：</label> <input class="input-re-pwd" name="rePassword" type="password" placeholder="请输入密码"></p>
                 <p><label>QQ号码：</label> <input class="input-qq" name="qq" type="text" placeholder="请输入QQ号码"></p>
-                <p class="yzm"><label>验证码：</label> <input class="input-vcode" name="vcode" type="text" placeholder="请输入验证码"><a href="#"><img src="http://47.52.143.236/api/captcha/getCaptchaCode"></a></p>
+                <p class="yzm"><label>验证码：</label> <input class="input-vcode" name="vcode" type="text" placeholder="请输入验证码"><img (click)="getCode()" [src]="captchaCode"></p>
                 <p>默认取款密码：""</p>
                 <input type="hidden" name="bankPwd" value="" />
                 <input type="hidden" name="defLoginPwd" value="" />
