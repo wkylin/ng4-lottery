@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -10,9 +10,11 @@ import swal from 'sweetalert2';
     styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  
+    @Input()
+    private userName = 'wkylin';
     
     api = 'http://47.52.143.236/api';
-    
     constructor(private http: HttpClient, private router: Router) {
     }
     
@@ -49,7 +51,7 @@ export class HeaderComponent implements OnInit {
     }
     
     ngOnInit() {
-        this.getUserInfo();
+        // this.getUserInfo();
     }
     
 }

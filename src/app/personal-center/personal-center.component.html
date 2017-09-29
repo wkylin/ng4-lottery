@@ -1,13 +1,12 @@
-<app-header></app-header>
+<app-header [userName]="userName"></app-header>
 <div class="page-app">
-    <app-header-nav></app-header-nav>
-    
+    <app-header-nav ></app-header-nav>
     <div class="personal">
         <div class="personal-user">
             <div class="personal-usermid">
                 <div class="userpic"><img src="../../assets/personal-center/user.jpg"></div>
                 <div class="info">
-                    <div class="welusername">晚上好，178yule002！</div>
+                    <div class="welusername">晚上好，{{userName}}</div>
                     <div class="userdone">
                         <span class="jindu"><em style="width:70%"></em></span>
                         <span>资料完善度<em>20%</em></span>
