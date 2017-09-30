@@ -129,15 +129,15 @@
     font-size: 16px
 }
 
-.state-btn a {
+.state-btn span {
     padding: 5px 20px;
     background-color: #ff9f15;
     color: #fff;
     border-radius: 20px;
-    text-decoration: none;
+    cursor:pointer;
 }
 
-.state-btn a.disabled {
+.state-btn span.disabled {
     background-color: #ccc;
     color: #fff
 }
@@ -157,27 +157,30 @@
     margin-right: 100px
 }
 
-.tixianwrap span a {
+.tixianwrap span em {
     display: inline-block;
     margin-left: 50px;
     border-radius: 5px;
     padding: 5px 10px;
-    text-decoration: none;
+    cursor:pointer;
+    font-style:normal;
 }
 
-.tixianwrap span a.cun {
+.tixianwrap span em.cun {
     background-color: #d31a34;
     color: #fff
 }
 
-.tixianwrap span a.qu {
+.tixianwrap span em.qu {
     background-color: #2d97dd;
     color: #fff
 }
 
-.shua {
-    position: absolute;
-    right: 13px;
-    top: 13px;
-    bottom: 0;
+img.refresh {
+    float:right;
+    margin:5px 10px 0 0;
+    display:inline;
+    text-align:right;
+    cursor:pointer;
+    z-index:1000;
 }

@@ -30,7 +30,7 @@ export class PersonalCenterComponent implements OnInit {
                 }
             },
             err => {
-                console.log(err['error'].text);
+                console.log(err['error']);
                 swal(err['error']);
             }
         );
@@ -38,6 +38,6 @@ export class PersonalCenterComponent implements OnInit {
     
     ngOnInit() {
         this.userName = 'user name';
-        this.getUserInfo();
+        // this.getUserInfo();
     }
 }

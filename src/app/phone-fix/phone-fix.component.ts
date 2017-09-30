@@ -13,14 +13,14 @@ export class PhoneFixComponent implements OnInit {
     }
 
     phoneFix() {
-        $('.phone-fix label').stop(true, true).animate({left: '200px'}, 500, function () {
-            $('.phone-fix-content').stop(true, true).animate({left: '80px'}, 500);
+        $('.phone-fix label').stop(true, true).animate({left: '110px'}, 500, function () {
+            $('.phone-fix-content').stop(true, true).animate({left: '0'}, 500);
         });
     }
 
     phoneFixCancel() {
-        $('.phone-fix-content').stop(true, true).animate({left: '200px'}, 500, function () {
-            $('.phone-fix label').stop(true, true).animate({left: '140px'}, 500);
+        $('.phone-fix-content').stop(true, true).animate({left: '110px'}, 500, function () {
+            $('.phone-fix label').stop(true, true).animate({left: '50px'}, 500);
         });
     }
 
