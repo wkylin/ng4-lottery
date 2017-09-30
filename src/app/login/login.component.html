@@ -5,8 +5,7 @@
                 <h2>登录</h2>
                 <p><label>账号：</label> <input class="login-name" name="username" type="text" placeholder="请输入账号"></p>
                 <p><label>密码：</label> <input class="login-pwd" name="password" type="password" placeholder="请输入密码"></p>
-                <p class="yzm"><label>验证码：</label> <input name="" type="text" placeholder="请输入验证码"><span class="get-code" ><img (click)="getCode()" [src]="captchaCode" /></span></p>
-                <!--<p class="yzm"><label>验证码：</label> <input class="login-vcode" name="vcode" type="text" placeholder="请输入验证码"><span class="get-code" ><img (click)="getCode()" src="http://47.52.143.236/api/captcha/getCaptchaCode" /></span></p>-->
+                <p class="yzm"><label>验证码：</label> <input class="login-vcode" name="vcode" type="text" placeholder="请输入验证码"><span class="get-code" ><img (click)="getCode()" [src]="captchaCode" /></span></p>
                 <span class="lgbtn" (click)="login()">立即登录</span>
                 <p align="center"><a href="#">忘记密码</a> | <a href="#">账号充值</a></p>
             </div>

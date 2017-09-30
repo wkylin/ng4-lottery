@@ -48,6 +48,7 @@
     line-height: 30px;
     color: #aa1f1f;
     cursor:pointer;
+    text-decoration:none;
 }
 
 .header-control:hover {

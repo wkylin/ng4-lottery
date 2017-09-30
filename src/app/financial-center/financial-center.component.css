@@ -74,28 +74,3 @@
     display: inline-block;
     margin-right: 100px
 }
-
-
-
-.tixianwrap span a.cun,
-.tixianwrap span a.qu {
-    color: #fff;
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.tixianwrap span a.cun {
-    background-color: #d31a34;
-}
-.tixianwrap span a.qu {
-    background-color: #2d97dd;
-}
-
-.shua {
-    position: absolute;
-    right: 13px;
-    top: 13px;
-    bottom: 0;
-}
