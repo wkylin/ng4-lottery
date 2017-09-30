@@ -32,26 +32,7 @@ export class HeaderComponent implements OnInit {
             }
         );
     }
-    
-    // Users/getUserInfo
-    getUserInfo() {
-        const user_id = sessionStorage.getItem('user_id');
-        this.http.get(`${this.api}/Users/getUserInfo?user_id=` + user_id + '&params={"error":0,"user_id":"' + user_id + '"}').subscribe(
-            data => {
-                if (data['errormsg'] === null) {
-                    // this.router.navigateByUrl('home');
-                } else {
-                    swal(data['errormsg']);
-                }
-            },
-            err => {
-                swal(err['error']);
-            }
-        );
-    }
-    
     ngOnInit() {
-        // this.getUserInfo();
+        
     }
-    
 }

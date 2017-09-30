@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
     selector: 'app-my-account',
@@ -6,15 +6,11 @@ import { Component, OnInit,Input } from '@angular/core';
     styleUrls: ['./my-account.component.css']
 })
 export class MyAccountComponent implements OnInit {
-    
-    @Input()
-    userName: string;
-    
     constructor() {
     }
     
     ngOnInit() {
-        this.userName = 'wkylin';
+        
     }
     
 }

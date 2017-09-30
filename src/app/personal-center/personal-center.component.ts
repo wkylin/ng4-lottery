@@ -20,17 +20,17 @@ export class PersonalCenterComponent implements OnInit {
     // Users/getUserInfo
     getUserInfo() {
         const user_id = sessionStorage.getItem('user_id');
-        this.http.post(`${this.api}/Users/getUserInfo`, {'userId': '283E5F9B3B00CE1F4A78209757223F9C'}).subscribe(
+        this.http.get(`${this.api}/Users/getUserInfo?user_id=` + user_id + '&params={"user_id":' + user_id + '}' ).subscribe(
             data => {
                 if (data['errormsg'] === null) {
-                    this.router.navigateByUrl('home');
+                    console.log(data['result']);
+                    // this.router.navigateByUrl('home');
                 } else {
-                    
                     swal(data['errormsg']);
                 }
             },
             err => {
-                console.log(err['error']);
+                console.log(err['error'].text);
                 swal(err['error']);
             }
         );
