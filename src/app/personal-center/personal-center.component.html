@@ -1,4 +1,4 @@
-<app-header [userName]="userName"></app-header>
+<app-header [userName]="userName" [userBalance] = "userBalance"></app-header>
 <div class="page-app">
     <app-header-nav ></app-header-nav>
     <div class="personal">
@@ -8,8 +8,8 @@
                 <div class="info">
                     <div class="welusername">晚上好，{{userName}}</div>
                     <div class="userdone">
-                        <span class="jindu"><em style="width:70%"></em></span>
-                        <span>资料完善度<em>20%</em></span>
+                        <span class="jindu"><em [style.width]="integrity"></em></span>
+                        <span>资料完善度<em>{{integrity}}</em></span>
                     </div>
                     <div class="zhuangtai">账户状态：正常 <a href="javascript:void(0)">完善资料</a></div>
                 </div>

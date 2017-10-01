@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -13,18 +13,22 @@ export class PersonalCenterComponent implements OnInit {
     
     api = 'http://47.52.143.236/api';
     userName: string;
+    userInfo: string;
+    integrity: string;
+    userBalance: string;
     
     constructor(private http: HttpClient, private router: Router) {
     }
-    
-    // Users/getUserInfo
     getUserInfo() {
         const user_id = sessionStorage.getItem('user_id');
-        this.http.post(`${this.api}/Users/getUserInfo?user_id=` + user_id, {'user_id': user_id }).subscribe(
+        this.http.post(`${this.api}/Users/getUserInfo?user_id=` + user_id, {'user_id': user_id}, {'responseType': 'json'}).subscribe(
             data => {
                 if (data['errormsg'] === null) {
+                    this.userInfo = data['result'];
+                    this.userName = this.userInfo['username'];
+                    this.integrity = this.userInfo['dataIntegrity'] + '%';
+                    this.userBalance = this.userInfo['balance'];
                     console.log(data['result']);
-                    // this.router.navigateByUrl('home');
                 } else {
                     swal(data['errormsg']);
                 }
@@ -37,7 +41,6 @@ export class PersonalCenterComponent implements OnInit {
     }
     
     ngOnInit() {
-        this.userName = 'user name';
         this.getUserInfo();
     }
 }

@@ -12,7 +12,11 @@ import swal from 'sweetalert2';
 export class HeaderComponent implements OnInit {
   
     @Input()
-    private userName = 'wkylin';
+    private userName = '';
+    
+    @Input()
+    private userBalance = '';
+    
     
     api = 'http://47.52.143.236/api';
     constructor(private http: HttpClient, private router: Router) {
