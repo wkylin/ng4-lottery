@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
     }
     
     getCode() {
-        this.http.get(`${this.api}/captcha/getCaptchaCode`, {responseType: 'text'}).subscribe(
+        this.http.post(`${this.api}/captcha/getCaptchaCode`, {},{responseType: 'text'}).subscribe(
             data => {
                 this.captchaCode = 'data:image/png;base64,' + JSON.parse(data).result.data;
             },

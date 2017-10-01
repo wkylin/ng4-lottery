@@ -20,7 +20,7 @@ export class PersonalCenterComponent implements OnInit {
     // Users/getUserInfo
     getUserInfo() {
         const user_id = sessionStorage.getItem('user_id');
-        this.http.get(`${this.api}/Users/getUserInfo?user_id=` + user_id + '&params={"user_id":' + user_id + '}' ).subscribe(
+        this.http.post(`${this.api}/Users/getUserInfo?user_id=` + user_id, {'user_id': user_id }).subscribe(
             data => {
                 if (data['errormsg'] === null) {
                     console.log(data['result']);
@@ -38,6 +38,6 @@ export class PersonalCenterComponent implements OnInit {
     
     ngOnInit() {
         this.userName = 'user name';
-        // this.getUserInfo();
+        this.getUserInfo();
     }
 }
