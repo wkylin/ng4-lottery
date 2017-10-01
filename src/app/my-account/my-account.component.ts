@@ -10,7 +10,6 @@ import swal from 'sweetalert2';
     styleUrls: ['./my-account.component.css']
 })
 export class MyAccountComponent implements OnInit {
-    api = 'http://47.52.143.236/api';
     userInfo: object;
     maxRebate: number;
     minRebate: number;
@@ -21,7 +20,7 @@ export class MyAccountComponent implements OnInit {
     
     getUserInfo() {
         const user_id = sessionStorage.getItem('user_id');
-        this.http.post(`${this.api}/Users/getUserInfo?user_id=` + user_id, {'user_id': user_id}, {'responseType': 'json'}).subscribe(
+        this.http.post(`api/Users/getUserInfo?user_id=` + user_id, {'user_id': user_id}, {'responseType': 'json'}).subscribe(
             data => {
                 if (data['errormsg'] === null) {
                     this.userInfo = data['result'];

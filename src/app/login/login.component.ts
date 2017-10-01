@@ -12,13 +12,11 @@ import swal from 'sweetalert2';
 })
 export class LoginComponent implements OnInit {
     captchaCode = '';
-    api = 'http://47.52.143.236/api';
-    
     constructor(private http: HttpClient, private router: Router) {
     }
     
     getCode() {
-        this.http.post(`${this.api}/captcha/getCaptchaCode`, {},{responseType: 'text'}).subscribe(
+        this.http.post(`api/captcha/getCaptchaCode`, {}, {responseType: 'text'}).subscribe(
             data => {
                 this.captchaCode = 'data:image/png;base64,' + JSON.parse(data).result.data;
             },
@@ -29,7 +27,7 @@ export class LoginComponent implements OnInit {
     }
     
     login() {
-        this.http.post(`${this.api}/Users/login`, {
+        this.http.post(`/api/Users/login`, {
                 'username': $('.login-name').val(),
                 'password': $('.login-pwd').val(),
                 'vcode': $('.login-vcode').val() || null

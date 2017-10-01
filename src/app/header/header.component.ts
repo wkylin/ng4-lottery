@@ -16,16 +16,16 @@ export class HeaderComponent implements OnInit {
     
     @Input()
     private userBalance = '';
-    
-    
-    api = 'http://47.52.143.236/api';
+
     constructor(private http: HttpClient, private router: Router) {
     }
     
     loginOut() {
-        this.http.post(`${this.api}/Users/loginOut`, null).subscribe(
+        const user_id = sessionStorage.getItem('user_id') || '';
+        this.http.post(`api/Users/loginOut?user_id=` + user_id, {}).subscribe(
             data => {
                 if (data['errormsg'] === null) {
+                    sessionStorage.clear();
                     this.router.navigateByUrl('home');
                 } else {
                     swal(data['errormsg']);
