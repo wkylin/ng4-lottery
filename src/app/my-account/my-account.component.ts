@@ -11,9 +11,16 @@ import swal from 'sweetalert2';
 })
 export class MyAccountComponent implements OnInit {
     userInfo: object;
+    frozenAmount: number;
+    usableAmount: number;
     maxRebate: number;
     minRebate: number;
     addTime: string;
+    balance: number;
+    
+    
+    isQQ: boolean;
+    QQ: string;
     
     constructor(private http: HttpClient, private router: Router) {
     }
@@ -27,7 +34,13 @@ export class MyAccountComponent implements OnInit {
                     this.maxRebate = this.userInfo['maxRebate'];
                     this.minRebate = this.userInfo['minRebate'];
                     this.addTime = this.userInfo['addTime'];
-                    console.log(this.userInfo);
+                    this.frozenAmount = this.userInfo['frozenAmount'];
+                    this.usableAmount = this.userInfo['usableAmount'];
+                    this.balance = this.userInfo['balance'];
+                    
+                    this.isQQ = this.userInfo['qq'] !== null ? true : false;
+                    this.QQ = this.userInfo['qq'];
+                    console.log(this.isQQ);
                 } else {
                     swal(data['errormsg']);
                 }
@@ -39,6 +52,21 @@ export class MyAccountComponent implements OnInit {
         );
     }
     
+    goRechargeCash() {
+        this.router.navigateByUrl('personal-center/financial-center/recharge-cash');
+    }
+    
+    goWithDrawCash() {
+        this.router.navigateByUrl('personal-center/financial-center/withdraw-cash');
+    }
+    
+    refreshCash() {
+        this.getUserInfo();
+    }
+    
+    bindQQ() {
+        swal('绑定QQ');
+    }
     ngOnInit() {
         this.getUserInfo();
     }

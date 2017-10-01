@@ -1,8 +1,8 @@
 <div class="personal-con">
     <h2 class="title">我的信息</h2>
     <div class="mc-con">
-        <p><span class="fLeft">可用余额:1,000.000</span><span class="fRight">本次登陆时间:2017-09-07</span></p>
-        <p><span class="fLeft">冻结金额:0.00</span><span class="fRight">本次登陆IP:58.37.21.84</span></p>
+        <p><span class="fLeft">可用余额: {{usableAmount}}</span><span class="fRight">本次登陆时间:2017-09-07</span></p>
+        <p><span class="fLeft">冻结金额: {{frozenAmount}}</span><span class="fRight">本次登陆IP:58.37.21.84</span></p>
         <p><span class="fLeft">返点:高频:{{maxRebate}} / 低频:{{minRebate}}</span><span class="fRight">上次登录时间:2017-09-07</span></p>
         <p><span class="fLeft">注册时间:{{addTime | date:'yyyy-MM-dd'}}</span><span class="fRight">上次登陆IP:58.37.21.84</span></p>
     </div>
@@ -71,15 +71,17 @@
             <div class="statelist fLeft">
                 <span class="statespan qq"></span>
                 <div class="jj-con">
-                    <span>绑定QQ</span>
+                    <span *ngIf="isQQ">已绑定QQ：{{QQ}}</span>
+                    <span *ngIf="!isQQ">绑定QQ</span>
                 </div>
             </div>
-            <div class="fRight state-btn"><span class="disabled">绑定QQ</span></div>
+            <div class="fRight state-btn" *ngIf="isQQ"><span class="disabled">绑定QQ</span></div>
+            <div class="fRight state-btn" *ngIf="!isQQ"><span (click)="bindQQ()" >绑定QQ</span></div>
         </div>
     </div>
 </div>
 <div class="personal-con tixianwrap clearfix">
-    <span>账户总额: 103,840.000 <em class="cun">存款</em> </span>
-    <span>可提金额:103,840.000 <em class="qu">提现</em></span>
-    <img class="refresh" src="../../assets/personal-center/my-account/refresh.png" width="22">
+    <span>账户总额: {{ balance }} <em class="cun" (click)="goRechargeCash()">存款</em> </span>
+    <span>可提金额: {{usableAmount}} <em class="qu" (click)="goWithDrawCash()">提现</em></span>
+    <img class="refresh" src="../../assets/personal-center/my-account/refresh.png" width="22" (click)="refreshCash()">
 </div>
