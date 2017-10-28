@@ -1,0 +1,24 @@
+.btb-tabs {
+    margin-left: 1px;
+    border-bottom: solid 1px #ccc
+}
+
+.btb-tabs li a:link,
+.btb-tabs li a:hover {
+    float: left;
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+    padding: 0 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btb-tabs li a.on, .btb-tabs li a.hover {
+    background: none;
+    border-bottom: solid 2px #ff9f15;
+    text-decoration: none;
+}

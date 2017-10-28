@@ -1,0 +1,27 @@
+<div class="trade-con clearfix">
+    <div class="time-picker">时间范围<input size="16" type="text" readonly class="form_datetime start-time" placeholder="起始日期">至<input size="16" type="text"  readonly class="form_datetime end-time" placeholder="截至日期"><span (click)="queryPayLogs()">查询</span></div>
+    <div class="betlog-table">
+        <table width="96%" class="table-qk">
+            <tr>
+                <th>流水号</th>
+                <th>用户名</th>
+                <th>充值金额</th>
+                <th>状态</th>
+                <th>操作时间</th>
+            </tr>
+            <tr *ngIf="!isShow; else showBetList">
+                <td colspan="5">暂时没有数据</td>
+            </tr>
+            <ng-template #showBetList>
+                <tr *ngFor="let item of payList">
+                    <td>{{item.id}}</td>
+                    <td>{{item.user_name}}</td>
+                    <td>{{item.amount}}</td>
+                    <td>{{item.status}}</td>
+                    <td>{{item.addTime*1000 | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                </tr>
+            </ng-template>
+        </table>
+        <app-pagination [totalCount]="totalCount" [changePage]="pageSize" [pageSize]="pageSize" [currentPage]="currentPage" [pageCount]="pageCount" (changeCurrentPage)="getPageData($event)" (changeOption)="getPageData($event)"></app-pagination>
+    </div>
+</div>

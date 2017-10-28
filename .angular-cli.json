@@ -22,14 +22,14 @@
                 "styles.css",
                 "../node_modules/_bootstrap@3.3.7@bootstrap/dist/css/bootstrap.min.css",
                 "../src/assets/libs/sweetalert2/sweetalert2.min.css",
-                "../src/assets/libs/date-time-picker/bootstrap-datetimepicker.css",
+                "../src/assets/libs/date-timepicker/bootstrap-datetimepicker.css",
                 "../src/assets/libs/flip-clock/flip-clock.css"
             ],
             "scripts": [
                 "../node_modules/_jquery@3.2.1@jquery/dist/jquery.min.js",
                 "../node_modules/_bootstrap@3.3.7@bootstrap/dist/js/bootstrap.min.js",
                 "../src/assets/libs/jquery.fullPage.min.js",
-                "../src/assets/libs/date-time-picker/bootstrap-datetimepicker.min.js",
+                "../src/assets/libs/date-timepicker/bootstrap-datetimepicker.min.js",
                 "../src/assets/libs/jquery.spinner.js",
                 "../src/assets/libs/flip-clock/flip-clock.js"
             ],

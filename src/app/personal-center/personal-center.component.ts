@@ -26,7 +26,7 @@ export class PersonalCenterComponent implements OnInit {
                     this.userName = this.userInfo['username'];
                     this.integrity = this.userInfo['dataIntegrity'] + '%';
                     this.userBalance = this.userInfo['balance'];
-                    console.log(data['result']);
+                    sessionStorage.setItem('myAssets', this.userBalance);
                 } else {
                     swal(data['errormsg']);
                 }
@@ -40,5 +40,9 @@ export class PersonalCenterComponent implements OnInit {
     
     ngOnInit() {
         this.getUserInfo();
+    }
+    
+    goMyCount() {
+        this.router.navigateByUrl('/personal-center/my-account');
     }
 }

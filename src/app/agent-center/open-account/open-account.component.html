@@ -1,0 +1,16 @@
+<div id="tab2" class="rg-tab">
+    <ul class="btb-tabs clearfix">
+        <li>
+            <a [routerLink]="['/personal-center/agent-center/open-account/shortcut']" routerLinkActive="on">一键开户</a>
+        </li>
+        <li>
+            <a [routerLink]="['/personal-center/agent-center/open-account/spread']" routerLinkActive="on">推广开户</a>
+        </li>
+        <li>
+            <a [routerLink]="['/personal-center/agent-center/open-account/link']" routerLinkActive="on">链接管理</a>
+        </li>
+    </ul>
+    <div class="show-box">
+        <router-outlet></router-outlet>
+    </div>
+</div>

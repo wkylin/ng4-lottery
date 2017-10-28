@@ -13,12 +13,12 @@
     font-size: 24px
 }
 
-.jiaoyi-con .timepicker {
+.trade-con .time-picker {
     font-size: 16px;
     padding: 20px
 }
 
-.jiaoyi-con .timepicker input {
+.trade-con .time-picker input {
     vertical-align: top;
     background: none;
     cursor: pointer;
@@ -30,16 +30,16 @@
     border-radius: 0;
 }
 
-.jiaoyi-con .timepicker a {
+.trade-con .time-picker span {
     display: inline-block;
     padding: 4px 15px;
     border-radius: 5px;
     background-color: #ff9f15;
     color: #fff;
-    text-decoration: none;
+    cursor:pointer;
 }
 
-.jiaoyi-con .timepicker input {
+.trade-con .time-picker input {
     vertical-align: top;
     background: none;
     cursor: pointer;
@@ -51,11 +51,11 @@
     border-radius: 0
 }
 
-.betlogtable .table_qk {
+.betlog-table .table-qk {
     margin: 0 2% 4%;
 }
 
-.table_qk td {
+.table-qk td {
     background-color: #fff;
     text-align: center;
     padding: 10px;

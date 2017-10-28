@@ -2,55 +2,32 @@
     <div class="price-top">
         <div id="dev-price-bg">
             <ul>
-                <li><a href="#"><span>安徽15选5</span></a></li>
-                <li><a href="#"><span>江西15选5</span></a></li>
-                <li><a href="#"><span>广东15选5</span></a></li>
-                <li><a href="#"><span>山东15选5</span></a></li>
-                <li><a href="#"><span>上海15选5</span></a></li>
+                <li *ngFor="let item of fiveFromEleven"><a [routerLink]="['/lottery-play/lottery/',item.subItem.id]"><span>{{ item.subItem.title }}</span></a></li>
             </ul>
             
             <ul>
-                <li><a href="#"><span>菜单2</span></a></li>
-                <li><a href="#"><span>菜单2</span></a></li>
-                <li><a href="#"><span>菜单2</span></a></li>
-                <li><a href="#"><span>菜单2</span></a></li>
-                <li><a href="#"><span>菜单2</span></a></li>
+                <li *ngFor="let item of fastThree"><a [routerLink]="['/lottery-play/lottery/',item.subItem.id]"><span>{{ item.subItem.title }}</span></a></li>
             </ul>
             
             <ul>
-                <li><a href="#"><span>菜单3</span></a></li>
-                <li><a href="#"><span>菜单3</span></a></li>
-                <li><a href="#"><span>菜单3</span></a></li>
-                <li><a href="#"><span>菜单3</span></a></li>
-                <li><a href="#"><span>菜单3</span></a></li>
+                <li *ngFor="let item of fastTen"><a [routerLink]="['/lottery-play/lottery/',item.subItem.id]"><span>{{ item.subItem.title }}</span></a></li>
             </ul>
             
             <ul>
-                <li><a href="#"><span>菜单4</span></a></li>
-                <li><a href="#"><span>菜单4</span></a></li>
-                <li><a href="#"><span>菜单4</span></a></li>
-                <li><a href="#"><span>菜单4</span></a></li>
-                <li><a href="#"><span>菜单4</span></a></li>
+                <li *ngFor="let item of PkTen"><a [routerLink]="['/lottery-play/lottery/',item.subItem.id]"><span>{{ item.subItem.title }}</span></a></li>
             </ul>
             
             <ul>
-                <li><a href="#"><span>菜单5</span></a></li>
-                <li><a href="#"><span>菜单5</span></a></li>
-                <li><a href="#"><span>菜单5</span></a></li>
-                <li><a href="#"><span>菜单5</span></a></li>
-                <li><a href="#"><span>菜单5</span></a></li>
+                <li *ngFor="let item of timeLottery"><a [routerLink]="['/lottery-play/lottery/',item.subItem.id]"><span>{{ item.subItem.title }}</span></a></li>
             </ul>
         </div>
-        
         <div id="price-top-bg" class="price-top-bg-default">&nbsp;</div>
-        
         <div class="zidx10">
             <img src="../../assets/price-tag/price1.png" class="price-top-price price-top-price1"/>
             <img src="../../assets/price-tag/price2.png" class="price-top-price price-top-price2"/>
             <img src="../../assets/price-tag/price3.png" class="price-top-price price-top-price3"/>
             <img src="../../assets/price-tag/price4.png" class="price-top-price price-top-price4"/>
             <img src="../../assets/price-tag/price5.png" class="price-top-price price-top-price5"/>
-            
             <img src="../../assets/price-tag/price-logo.png" class="price-top-logo"/>
         </div>
     </div>
@@ -62,49 +39,42 @@
                     <span>首页</span>
                 </a>
             </li>
-            
             <li>
                 <a [routerLink]="['/price-tag']">
                     <img src="../../assets/price-tag/price-game.png"/>
                     <span>彩票游戏</span>
                 </a>
             </li>
-            
             <li>
                 <a [routerLink]="['/other']">
                     <img src="../../assets/price-tag/price-people.png"/>
                     <span>真人视频</span>
                 </a>
             </li>
-            
             <li>
                 <a [routerLink]="['/other']">
                     <img src="../../assets/price-tag/price-videogame.png"/>
                     <span>电子游戏</span>
                 </a>
             </li>
-            
             <li>
                 <a [routerLink]="['/red-envelope']">
                     <img src="../../assets/price-tag/price-active.png"/>
                     <span>优惠活动</span>
                 </a>
             </li>
-            
             <li>
                 <a [routerLink]="['/personal-center']">
                     <img src="../../assets/price-tag/price-myaccount.png"/>
                     <span>个人中心</span>
                 </a>
             </li>
-            
             <li>
                 <a [routerLink]="['/other']">
                     <img src="../../assets/price-tag/price-service.png"/>
                     <span>在线客服</span>
                 </a>
             </li>
-            
             <li>
                 <a [routerLink]="['/other']">
                     <img src="../../assets/price-tag/price-vnewperson.png"/>

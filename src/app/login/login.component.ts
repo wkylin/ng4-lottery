@@ -38,9 +38,11 @@ export class LoginComponent implements OnInit {
                         sessionStorage.setItem('user_id', data['result']['user_id']);
                         this.router.navigateByUrl('personal-center');
                     } else {
-                        swal(data['errormsg']);
+                        swal({
+                            title: data['errormsg'],
+                            confirmButtonText: '确定'
+                        });
                     }
-                    console.log(data);
                 },
                 err => {
                     console.log(err['error']);

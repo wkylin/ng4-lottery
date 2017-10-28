@@ -1,0 +1,45 @@
+<div class="trade-con">
+    <div class="time-picker">时间范围<input size="16" type="text" readonly class="form_datetime start-time" placeholder="起始日期">至<input size="16" type="text" readonly class="form_datetime end-time" placeholder="截至日期"><span (click)="queryStatDatas()">查询</span></div>
+    <div class="betlog-table">
+        <table width="96%" class="table-qk">
+            <tbody>
+            <tr>
+                <td>团队成员</td>
+                <td>{{userCount}}（代理{{agentCount}}人，玩家{{memberCount}}人）</td>
+                <td>在线人数</td>
+                <td>{{onlineCount}}人</td>
+            </tr>
+            <tr>
+                <td>新增加用户</td>
+                <td>{{newCount}}人</td>
+                <td>充值人数</td>
+                <td>{{recPersCoun}}人</td>
+            </tr>
+            <tr>
+                <td>投注金额(包括追号)</td>
+                <td>￥ {{bet}}</td>
+                <td>中奖金额</td>
+                <td>￥ {{winBet}}</td>
+            </tr>
+            <tr>
+                <td>返点金额</td>
+                <td>￥ {{betReturn}}</td>
+                <td>可用金额</td>
+                <td>￥ {{usable}}</td>
+            </tr>
+            <tr>
+                <td>充值总额</td>
+                <td>￥ {{recharge}}</td>
+                <td>提现总额</td>
+                <td>￥ {{cashSuc}}</td>
+            </tr>
+            <tr>
+                <td>撤单总额</td>
+                <td>￥ {{cancelBet}}</td>
+                <td>盈亏总额</td>
+                <td>￥ {{proAndLoss}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

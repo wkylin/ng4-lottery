@@ -1,0 +1,45 @@
+<div class="sec-con">
+    <div class="alert alert-success ng-binding"> 自动注册的会员初始安全密码"0000"，请及时修改通知下级修改</div>
+    <table width="80%" align="center" class="table-qk">
+        <tr>
+            <td>用户类型</td>
+            <td class="list-line"><input type="radio" name="type" value="0" checked> 代理 <input type="radio" name="type" value="1"> 会员</td>
+        </tr>
+        <tr>
+            <td>用户名</td>
+            <td class="list-line"><input name="username" type="text"></td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td class="list-line"><input name="password" type="password"></td>
+        </tr>
+        <tr>
+            <td>高频彩返点（%）</td>
+            <td class="list-line">
+                <input class="fix-max" name="maxRebate" type="text" value="{{minRebate}}">
+            </td>
+        </tr>
+        <tr class="fix-max-tr">
+            <td></td>
+            <td class="readme">
+                <div>范围：（{{minRebate}}，{{maxRebate}}）</div>
+            </td>
+        </tr>
+        <tr>
+            <td>低频彩返点（%）</td>
+            <td class="list-line">
+                <input class="fix-min" name="minRebate" type="text" value="{{maxRebate}}">
+            </td>
+        </tr>
+        <tr class="fix-min-tr">
+            <td></td>
+            <td class="readme">
+                <div>范围：{{minRebate}}，{{maxRebate}}</div>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="left"><span (click)="goRegister()">提交</span></td>
+        </tr>
+    </table>
+</div>

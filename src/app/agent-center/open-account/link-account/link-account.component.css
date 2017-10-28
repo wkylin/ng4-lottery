@@ -1,0 +1,116 @@
+
+.sec-con {
+    width: 95%;
+    margin: auto;
+}
+
+.trade-con .time-picker {
+    font-size: 16px;
+    padding: 20px
+}
+
+.trade-con .time-picker input {
+    vertical-align: top;
+    background: none;
+    cursor: pointer;
+    margin: 0 10px;
+    width: 100px;
+    border: none;
+    border-bottom: solid 1px #ccc;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.trade-con .time-picker a {
+    display: inline-block;
+    padding: 4px 15px;
+    border-radius: 5px;
+    background-color: #ff9f15;
+    color: #fff;
+    text-decoration: none;
+}
+
+.trade-con .time-picker input {
+    vertical-align: top;
+    background: none;
+    cursor: pointer;
+    margin: 0 10px;
+    width: 100px;
+    border: none;
+    border-bottom: solid 1px #ccc;
+    box-shadow: none;
+    border-radius: 0
+}
+
+.table-qk {
+    background-color: #ccc;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.table-qk td {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+}
+
+.sec-con td.list-line {
+    width: 60%;
+    padding-left: 0;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.sec-con td.readme {
+    width: 60%;
+    padding-left: 0;
+    text-align: left;
+    color: #1f9bde;
+}
+
+.sec-con td.list-line input[type="text"] {
+    width: 100%;
+    border: none;
+}
+
+.sec-con td.list-line input[type="password"] {
+    width: 100%;
+    border: none;
+}
+
+.sec-con .left span {
+    color: #fff;
+    background-color: #d31a34;
+    border-color: #d31a34;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.link-item{
+    margin-bottom:15px;
+}
+
+.link-title {
+    float: left;
+    display: inline;
+    margin-right: 20px;
+    margin-top:8px;
+    font-size:16px;
+
+}
+
+.link-desc {
+    float: left;
+    display: inline;
+}
+
+.link-url {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #1f9bde;
+    color: #1f9bde;
+}

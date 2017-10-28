@@ -1,0 +1,41 @@
+<div class="trade-con">
+    <div class="time-picker">
+        时间范围<input size="16" type="text" readonly class="form_datetime start-time" placeholder="起始日期">至<input size="16" type="text" readonly class="form_datetime end-time" placeholder="截至日期"><span (click)="queryBetLog()">查询</span>
+    </div>
+    <div class="betlog-table">
+        <table width="96%" class="table-qk">
+            <tr>
+                <th>记录时间</th>
+                <th>用户名</th>
+                <th>期号</th>
+                <th>游戏名称</th>
+                <th>投注金额</th>
+                <th>状态</th>
+                <th>奖金</th>
+                <!--<th>详情</th>-->
+            </tr>
+            <tr *ngIf="!isShow; else showBetList">
+                <td colspan="7">暂时没有数据</td>
+            </tr>
+            <ng-template #showBetList>
+                <tr *ngFor="let item of betList">
+                    <td>{{item.addTime*1000 | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                    <td>{{item.user_name}}</td>
+                    <td>{{item.log_id}}</td>
+                    <td>{{item.gameTitle}}</td>
+                    <td>{{item.betAmount}}</td>
+                    <td>
+                        <span *ngIf="item.status==-1">撤单</span>
+                        <span *ngIf="item.status==0">未开奖</span>
+                        <span *ngIf="item.status==1">已封单</span>
+                        <span *ngIf="item.status==2">已开奖</span>
+                        <span *ngIf="item.status==3">已中奖</span>
+                    </td>
+                    <td>{{item.winAmount}}</td>
+                    <!--<td><span>查看详情</span></td>-->
+                </tr>
+            </ng-template>
+        </table>
+        <app-pagination [totalCount]="totalCount" [changePage]="pageSize" [pageSize]="pageSize" [currentPage]="currentPage" [pageCount]="pageCount" (changeCurrentPage)="getPageData($event)" (changeOption)="getPageData($event)"></app-pagination>
+    </div>
+</div>

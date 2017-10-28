@@ -11,7 +11,9 @@
                         <span class="jindu"><em [style.width]="integrity"></em></span>
                         <span>资料完善度<em>{{integrity}}</em></span>
                     </div>
-                    <div class="zhuangtai">账户状态：正常 <a href="javascript:void(0)">完善资料</a></div>
+                    <div class="zhuangtai">账户状态：正常 
+                        <span (click)="goMyCount()">完善资料</span>
+                    </div>
                 </div>
             </div>
         </div>

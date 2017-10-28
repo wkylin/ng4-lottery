@@ -12,10 +12,10 @@ import swal from 'sweetalert2';
 export class HeaderComponent implements OnInit {
   
     @Input()
-    private userName = '';
+    public userName = '';
     
     @Input()
-    private userBalance = '';
+    public userBalance = '';
 
     constructor(private http: HttpClient, private router: Router) {
     }
@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
             data => {
                 if (data['errormsg'] === null) {
                     sessionStorage.clear();
-                    this.router.navigateByUrl('home');
+                    this.router.navigateByUrl('login');
                 } else {
                     swal(data['errormsg']);
                 }

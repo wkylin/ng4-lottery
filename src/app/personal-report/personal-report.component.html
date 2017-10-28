@@ -1,21 +1,33 @@
 <div class="personal-con cw-con">
     <h2 class="title">个人报表</h2>
-    <div class="jiaoyi-con">
-        <div class="timepicker">时间范围<input size="16" type="text" readonly class="form_datetime" placeholder="起始日期">至<input size="16" type="text" readonly class="form_datetime" placeholder="截至日期"><a href="">查询</a></div>
-        <div class="betlogtable">
-            <table width="96%" class="table_qk">
+    <div class="trade-con">
+        <div class="time-picker personal-report">时间范围<input size="16" type="text" readonly class="form_datetime start-time" placeholder="起始日期">至<input size="16" type="text" readonly class="form_datetime end-time" placeholder="截至日期"><span (click)="getPersonalData()">查询</span></div>
+        <div class="betlog-table">
+            <table width="96%" class="table-qk">
                 <tbody>
                 <tr>
                     <td>投注金额(包括追号)</td>
-                    <td>￥ 0.00</td>
+                    <td>￥ {{bet}}</td>
                     <td>中奖金额</td>
-                    <td>￥ 0.00</td>
+                    <td>￥ {{winBet}}</td>
                 </tr>
                 <tr>
                     <td>返点金额</td>
-                    <td>￥ 0.00</td>
+                    <td>￥ {{betReturn}}</td>
                     <td>可用金额</td>
-                    <td>￥ 103,840.00</td>
+                    <td>￥ {{usable}}</td>
+                </tr>
+                <tr>
+                    <td>充值总额</td>
+                    <td>￥ {{recharge}}</td>
+                    <td>提现总额</td>
+                    <td>￥ {{cashSuc}}</td>
+                </tr>
+                <tr>
+                    <td>撤单总额</td>
+                    <td>￥ {{cancelBet}}</td>
+                    <td>盈亏总额</td>
+                    <td>￥ {{proAndLoss}}</td>
                 </tr>
                 </tbody>
             </table>

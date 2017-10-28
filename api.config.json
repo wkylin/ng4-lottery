@@ -1,6 +1,8 @@
 {
     "/api": {
-        "target": "http://47.52.143.236/",
-        "secure": "false"
+        "target": "http://m178n.com/",
+        "secure": "false",
+        "changeOrigin": true,
+        "logLevel": "debug"
     }
 }

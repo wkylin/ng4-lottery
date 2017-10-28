@@ -1,0 +1,35 @@
+<div class="trade-con">
+    <div class="time-picker">用户名 <input name="" type="text" placeholder="请输入用户名" [(ngModel)]="userName" (keyup.enter)="getLoginLogByUser($event)"> 时间范围<input size="16" type="text" readonly class="form_datetime start-time" placeholder="起始日期">至<input size="16" type="text" readonly class="form_datetime end-time" placeholder="截至日期"><span (click)="queryLoginLog()">查询</span></div>
+    <div class="betlog-table">
+        <table width="96%" class="table-qk">
+            <tbody>
+            <tr>
+                <th>交易流水号</th>
+                <th>用户名</th>
+                <th>交易时间</th>
+                <th>类型</th>
+                <th>当前积分</th>
+                <th>操作积分</th>
+                <th>总积分</th>
+                <th>备注</th>
+            </tr>
+            <tr *ngIf="!isShow; else showIntegralList">
+                <td colspan="8">暂时没有数据</td>
+            </tr>
+            <ng-template #showIntegralList>
+                <tr *ngFor="let item of logList">
+                    <td>{{item.id}}</td>
+                    <td>{{item.user_name}}</td>
+                    <td>{{item.addTime*1000 | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                    <td>{{item.type}}</td>
+                    <td>{{item.usableAmount}}</td>
+                    <td>{{item.usable}}</td>
+                    <td>{{item.currentAmount}}</td>
+                    <td>{{item.intro}}</td>
+                </tr>
+            </ng-template>
+            </tbody>
+        </table>
+        <app-pagination [totalCount]="totalCount" [changePage]="pageSize" [pageSize]="pageSize" [currentPage]="currentPage" [pageCount]="pageCount" (changeCurrentPage)="getPageData($event)" (changeOption)="getPageData($event)"></app-pagination>
+    </div>
+</div>

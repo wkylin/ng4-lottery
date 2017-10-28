@@ -1,0 +1,65 @@
+<div class="track-code clearfix">
+    <div class="fl-left">
+        <span>方案编号</span><input class="log-id" name="" value="" [(ngModel)]="logId" (keyup.enter)="queryByLogId($event)" type="text" placeholder="请输入方案编号">
+    </div>
+    <div class="fl-left">
+        <span>游戏</span>
+        <select name="" class="game-id" [(ngModel)]="gameId" (change)="queryByGameId($event)">
+            <option value="" selected>请选择游戏</option>
+            <option *ngFor="let item of gameSubList" value="{{item.id}}">{{item.title}}</option>
+        </select>
+    </div>
+    <div class="fl-left">
+        <span>是否中奖停止</span>
+        <select class="win-stop" name="" [(ngModel)]="winStop" (change)="queryByGameWinStop($event)">
+            <option value="" selected>请选择</option>
+            <option value="1">是</option>
+            <option value="0">否</option>
+        </select>
+    </div>
+    <div class="fl-left">
+        <span>状态</span>
+        <select class="game-status" name="" [(ngModel)]="status" (change)="queryByGameStatus($event)">
+            <option value="" selected>请选择</option>
+            <option value="0">未开始</option>
+            <option value="1">已开始</option>
+            <option value="2">已停止</option>
+            <option value="3">已结束</option>
+        </select>
+    </div>
+</div>
+<div class="betlog-table">
+    <table width="96%" class="table-qk">
+        <tr>
+            <th>记录时间</th>
+            <th>用户名</th>
+            <th>期号</th>
+            <th>游戏名称</th>
+            <th>投注金额</th>
+            <th>状态</th>
+            <th>奖金</th>
+            <!--<th>详情</th>-->
+        </tr>
+        <tr *ngIf="!isShow; else track">
+            <td colspan="7">暂时没有数据</td>
+        </tr>
+        <ng-template #track>
+            <tr *ngFor="let item of trackList">
+                <td>{{item.addTime * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                <td>{{item.user_name}}</td>
+                <td>{{item.issueCount}}</td>
+                <td>{{item.gameTitle}}</td>
+                <td>{{item.betAmount}}</td>
+                <td>
+                    <span *ngIf="item.status==0">未开始</span>
+                    <span *ngIf="item.status==1">已开始</span>
+                    <span *ngIf="item.status==2">已停止</span>
+                    <span *ngIf="item.status==3">已结束</span>
+                </td>
+                <td>{{item.winAmount}}</td>
+                <!--<td><span>查看详情</span></td>-->
+            </tr>
+        </ng-template>
+    </table>
+    <app-pagination [totalCount]="totalCount" [changePage]="pageSize" [pageSize]="pageSize" [currentPage]="currentPage" [pageCount]="pageCount" (changeCurrentPage)="getPageData($event)" (changeOption)="getPageData($event)"></app-pagination>
+</div>

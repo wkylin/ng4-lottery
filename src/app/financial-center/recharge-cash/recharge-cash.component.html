@@ -1,0 +1,19 @@
+<div class="tab-border">
+    <div id="tab2" class="rg-tab">
+        <ul class="btb-tabs clearfix">
+            <li>
+                <a [routerLink]="['/personal-center/financial-center/recharge-cash/qc-code']" routerLinkActive="on">高通扫码</a>
+            </li>
+            <li>
+                <a [routerLink]="['/personal-center/financial-center/recharge-cash/net-bank']" routerLinkActive="on">网银支付</a>
+            </li>
+            <li>
+                <a [routerLink]="['/personal-center/financial-center/recharge-cash/ali-pay']" routerLinkActive="on">支付宝转网银</a>
+            </li>
+        </ul>
+        <div class="show-box">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+

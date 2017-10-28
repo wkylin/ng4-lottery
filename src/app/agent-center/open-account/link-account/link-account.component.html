@@ -1,0 +1,12 @@
+<div class="sec-con">
+    <div class="alert alert-warning ng-binding" *ngIf="!isShow; else linkList"> 您没有可以使用的注册链接,请点击<a [routerLink]="['/personal-center/agent-center/open-account/spread']">"推广开户"</a>添加注册链接</div>
+    <ng-template #linkList>
+        <div *ngFor="let item of linksList" class="clearfix link-item">
+            <div class="link-title">注册连接：</div>
+            <div class="link-desc">
+                <div class="link-url">{{item.regUrl}}</div>
+                <div>高频彩返点: {{item.maxRebate}}, 低频彩返点: {{item.minRebate}}, 可使用{{item.maxRegCount}} 次, 已使用 {{item.regCount}} 次, 有效期: {{item.expireTime * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</div>
+            </div>
+        </div>
+    </ng-template>
+</div>

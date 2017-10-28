@@ -1,0 +1,44 @@
+<div class="sec-con">
+    <table width="80%" align="center" class="table-qk">
+        <tr>
+            <td>用户类型</td>
+            <td class="list-line"><input type="radio" name="type" value="0" checked> 代理 <input type="radio" name="type" value="1"> 会员</td>
+        </tr>
+        <tr>
+            <td>高频彩返点（%）</td>
+            <td class="list-line"><input name="maxRebate" class="fix-max" type="text" value="{{maxRebate}}"></td>
+        </tr>
+        <tr class="fix-max-tr">
+            <td></td>
+            <td class="readme">
+                <div>范围：（{{minRebate}}，{{maxRebate}}）</div>
+            </td>
+        </tr>
+        <tr>
+            <td>低频彩返点（%）</td>
+            <td class="list-line"><input name="minRebate" class="fix-min" type="text" value="{{minRebate}}"></td>
+        </tr>
+        <tr class="fix-min-tr">
+            <td></td>
+            <td class="readme">
+                <div>范围：（{{minRebate}}，{{maxRebate}}）</div>
+            </td>
+        </tr>
+        <tr>
+            <td>注册链接</td>
+            <td class="list-line">
+                <select name="url" id="">
+                    <option value="1">1天</option>
+                    <option value="3">3天</option>
+                    <option value="7">1周</option>
+                    <option value="30" selected>1个月</option>
+                    <option value="999">永久</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="left"><span (click)="goRegister()">点击生成</span></td>
+        </tr>
+    </table>
+</div>

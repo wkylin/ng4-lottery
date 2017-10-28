@@ -27,6 +27,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## Github 
+##ng_lottery
+前端代码
 
-https://github.com/wkylin/ng4-lottery
+https://gitee.com/mplace/ng_lottery.git

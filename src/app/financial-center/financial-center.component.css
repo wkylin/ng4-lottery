@@ -13,22 +13,22 @@
     font-size: 24px
 }
 
-.rgTab {
+.rg-tab {
     margin: 0 auto;
 }
 
-.btnTabs {
+.btb-tabs {
     margin-left: 1px;
     /*border-bottom: solid 1px #ccc*/
 }
 
-.btnTabs b.on, .btnTabs a.on {
+.btb-tabs b.on, .btb-tabs a.on {
     background: #ff9f15;
     color: #fff;
     border: solid 1px #ff9f15
 }
 
-.btnTabs a {
+.btb-tabs a {
     float: left;
     height: 40px;
     display: inline-block;

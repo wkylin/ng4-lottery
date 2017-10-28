@@ -13,17 +13,8 @@
                                 <div class="block text-center">时时彩</div>
                             </div>
                             <ul>
-                                <li><a [routerLink]="['/lottery-play/lottery/1']">重庆时时彩</a></li>
-                                <li><a [routerLink]="['/lottery-play/lottery/2']">天津时时彩</a></li>
-                                <li><a [routerLink]="['/lottery-play/lottery/3']">新疆时时彩</a></li>
-                                <li><a [routerLink]="['/lottery-play/lottery/4']">五分彩</a></li>
-                                <li><a [routerLink]="['/lottery-play/lottery/5']">北京5分彩</a></li>
-                                <li><a [routerLink]="['/lottery-play/lottery/6']">新加坡2分彩</a></li>
-                                <li><a [routerLink]="['/lottery-play/lottery/7']">加拿大3.5分彩</a></li>
-                                <li><a [routerLink]="['/lottery-play/lottery/8']">台湾5分彩</a></li>
-                                <li><a [routerLink]="['/lottery-play/lottery/9']">韩国1.5分彩</a></li>
-                                <li><a [routerLink]="['/lottery-play/lottery/10']">新西兰45秒彩</a></li>
-                                <li><a [routerLink]="['/lottery-play/lottery/11']">分分彩</a></li>
+                                <li *ngFor="let item of timeLottery"><a [routerLink]="['/lottery-play/lottery/',item.subItem.id]">{{ item.subItem.title }}</a></li>
+                                <li *ngFor="let item of officialTimeLottery"><a [routerLink]="['/lottery-play/lottery/',item.subItem.id]">{{ item.subItem.title }}</a></li>
                             </ul>
                         </li>
                         <li>
@@ -31,40 +22,30 @@
                                 <span class="block">
                                     <img src="../../assets/header-menu/11x5.png" width="100" class="center-block"/>
                                 </span>
-                                <span class="block text-center">时时彩</span>
+                                <span class="block text-center">11选5</span>
                             </div>
                             <ul>
-                                <li><a href="#">安徽11选5</a></li>
-                                <li><a href="#">江西11选5</a></li>
-                                <li><a href="#">广东11选5</a></li>
-                                <li><a href="#">山东11选5</a></li>
-                                <li><a href="#">上海11选5</a></li>
+                                <li *ngFor="let item of fiveFromEleven"><a [routerLink]="['/lottery-play/lottery/',item.subItem.id]">{{ item.subItem.title }}</a></li>
                             </ul>
                         </li>
                         <li>
                             <div class="menu-header">
                                 <span class="block"><img src="../../assets/header-menu/31.png" width="100" class="center-block"/></span>
-                                <span class="block text-center">时时彩</span>
+                                <span class="block text-center">快开彩</span>
                             </div>
                             <ul>
-                                <li><a href="#">天津快乐10分</a></li>
-                                <li><a href="#">广东快乐10分</a></li>
-                                <li><a href="#">江苏快三</a></li>
-                                <li><a href="#">吉林快三</a></li>
-                                <li><a href="#">安徽快三</a></li>
+                                <li *ngFor="let item of fastTen"><a [routerLink]="['/lottery-play/lottery/', item.subItem.id]">{{ item.subItem.title }}</a></li>
+                                <li *ngFor="let item of fastThree"><a [routerLink]="['/lottery-play/lottery/', item.subItem.id]">{{ item.subItem.title }}</a></li>
                             </ul>
                         </li>
                         <li>
                             <div class="menu-header">
                                 <span class="block"><img src="../../assets/header-menu/dpc.png" width="100" class="center-block"/></span>
-                                <span class="block text-center">时时彩</span>
+                                <span class="block text-center">低频彩</span>
                             </div>
                             <ul>
-                                <li><a href="#">上海时时乐</a></li>
-                                <li><a href="#">排列3</a></li>
-                                <li><a href="#">排列5</a></li>
-                                <li><a href="#">福彩3D</a></li>
-                                <li><a href="#">PK10</a></li>
+                                <li *ngFor="let item of lowLottery"><a [routerLink]="['/lottery-play/lottery/', item.subItem.id]">{{ item.subItem.title }}</a></li>
+                                <li *ngFor="let item of PkTen"><a [routerLink]="['/lottery-play/lottery/', item.subItem.id]">{{ item.subItem.title }}</a></li>
                             </ul>
                         </li>
                     </ul>

@@ -13,16 +13,16 @@
     font-size: 24px
 }
 
-.rgTab {
+.rg-tab {
     margin: 0 auto;
 }
 
-.btnTabs {
+.btb-tabs {
     margin-left: 1px;
     border-bottom: solid 1px #ccc
 }
 
-.btnTabs b, .btnTabs a {
+.btb-tabs a {
     float: left;
     height: 40px;
     display: inline-block;
@@ -39,7 +39,12 @@
     border-top-right-radius: 5px;
 }
 
-.btnTabs li {
+.btb-tabs a:link,
+.btb-tabs a:hover,
+.btb-tabs a:active{
+    text-decoration: none;
+}
+.btb-tabs li {
     float: left;
     height: 40px;
     display: inline-block;
@@ -51,13 +56,13 @@
     cursor: pointer;
 }
 
-.btnTabs b.on, .btnTabs a.on {
+.btb-tabs b.on, .btb-tabs a.on {
     background: #ff9f15;
     color: #fff;
     border: solid 1px #ff9f15
 }
 
-.btnTabs li.on, .btnTabs li:hover {
+.btb-tabs li.on, .btb-tabs li:hover {
     background: none;
     border-bottom: solid 2px #ff9f15
 }
@@ -76,18 +81,11 @@
     font-weight: normal;
 }
 
-.showBox2 {
-    border: none;
-    display: none
-}
-
-.showBox1, .showBox3 {
+.show-box{
     overflow: hidden;
-    display: none;
     border: 1px solid #ff9f15;
     margin-top: -1px;
     padding: 10px 0 10px 0;
-    margin-top: -1px
 }
 
 .sec-con {
@@ -95,126 +93,3 @@
     padding: 30px 0 50px
 }
 
-.openAcctab1 .sec-con {
-    width: 95%;
-    margin: auto;
-}
-
-.openAcctab1 .table_qk {
-    background-color: #ccc;
-    width: 100%;
-}
-
-.openAcctab1 .table_qk td {
-    background-color: #fff;
-    text-align: center;
-    padding: 10px;
-    font-size: 14px;
-    border:none;
-}
-
-.openAcctab1 .sec-con td.list-line {
-    width: 60%;
-    padding-left: 0;
-    text-align: left;
-    border-bottom: 1px solid #eee;
-}
-
-.openAcctab1 .sec-con td.list-line input[type="text"]{
-    width:100%;
-    border: none;
-}
-
-.openAcctab1 .sec-con .left a {
-    color: #fff;
-    background-color: #d31a34;
-    border-color: #d31a34;
-    border-radius: 5px;
-    padding: 5px 15px;
-}
-
-.jiaoyi-con .timepicker {
-    font-size: 16px;
-    padding: 20px
-}
-
-.jiaoyi-con .timepicker input {
-    vertical-align: top;
-    background: none;
-    cursor: pointer;
-    margin: 0 10px;
-    width: 100px;
-    border: none;
-    border-bottom: solid 1px #ccc;
-    box-shadow: none;
-    border-radius: 0;
-}
-
-.jiaoyi-con .timepicker a {
-    display: inline-block;
-    padding: 4px 15px;
-    border-radius: 5px;
-    background-color: #ff9f15;
-    color: #fff;
-    text-decoration: none;
-}
-
-.jiaoyi-con .timepicker input {
-    vertical-align: top;
-    background: none;
-    cursor: pointer;
-    margin: 0 10px;
-    width: 100px;
-    border: none;
-    border-bottom: solid 1px #ccc;
-    box-shadow: none;
-    border-radius: 0
-}
-
-.betlogtable .table_qk {
-    margin: 0 2% 4%;
-}
-
-.table_qk th {
-    background-color: #eee;
-    text-align: center;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-}
-
-.table_qk td {
-    background-color: #fff;
-    text-align: center;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-}
-
-.tablepage {
-    width: 96%;
-    margin: auto;
-    text-align: right;
-    font-size: 14px;
-    color: #777
-}
-
-.tablepage a {
-    display: inline-block;
-    border-radius: 5px;
-    background-color: #eee;
-    padding: 0 10px;
-    vertical-align: top;
-    font-size: 16px;
-    color: #666;
-}
-
-.tablepage input {
-    width: 40px;
-    height: 20px;
-    line-height: 20px;
-}
-
-.tablepage select {
-    width: 60px
-}

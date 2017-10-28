@@ -44,11 +44,17 @@ export class RegisterComponent implements OnInit {
                 if (data['errormsg'] === null) {
                     this.router.navigateByUrl('personal-center');
                 } else {
-                    swal(data['errormsg']);
+                    swal({
+                        title: data['errormsg'],
+                        confirmButtonText: '确定'
+                    });
                 }
             },
             err => {
-                swal(err['error']['text']);
+                swal({
+                    title: err['error']['text'],
+                    confirmButtonText: '确定'
+                });
             }
         );
     }

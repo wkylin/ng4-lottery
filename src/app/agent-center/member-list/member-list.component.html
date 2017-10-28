@@ -1,0 +1,31 @@
+<div class="trade-con">
+    <div class="time-picker">用户名 <input value="" class="ux-input-text" [(ngModel)]="userName" (keyup.enter)="queryLowerByUser($event)" type="text" placeholder="请输入用户名"> 时间范围<input size="16" type="text" readonly class="form_datetime start-time" placeholder="起始日期">至<input size="16" type="text" readonly class="form_datetime end-time" placeholder="截至日期"><span (click)="queryLowers()">查询</span></div>
+    <div class="betlog-table">
+        <table width="96%" class="table-qk">
+            <tbody>
+            <tr>
+                <th>账号</th>
+                <th>添加时间</th>
+                <th>余额</th>
+                <th>类型</th>
+                <th>高/低频返点</th>
+                <th>操作</th>
+            </tr>
+            <tr *ngIf="!isShow; else lowers">
+                <td colspan="6">暂时没有数据</td>
+            </tr>
+            <ng-template #lowers>
+                <tr *ngFor="let item of lowersList">
+                    <td>{{item.username}}</td>
+                    <td>{{item.addTime*1000 | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                    <td>{{item.usableAmount}}</td>
+                    <td>{{item.type=='0'?'代理':'会员'}}</td>
+                    <td>{{item.maxRebate}} /{{item.minRebate}}</td>
+                    <td><span class="button-text" (click)="setRebate(item.id)">设置返点</span>/<span class="button-text" (click)="manualRebate(item.id, item.usableAmount)">手动转点</span></td>
+                </tr>
+            </ng-template>
+            </tbody>
+        </table>
+        <app-pagination [totalCount]="totalCount" [changePage]="pageSize" [pageSize]="pageSize" [currentPage]="currentPage" [pageCount]="pageCount" (changeCurrentPage)="getPageData($event)" (changeOption)="getPageData($event)"></app-pagination>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+
+.trade-con .time-picker {
+    font-size: 16px;
+    padding: 20px
+}
+
+.trade-con .time-picker input {
+    vertical-align: top;
+    background: none;
+    cursor: pointer;
+    margin: 0 10px;
+    width: 100px;
+    border: none;
+    border-bottom: solid 1px #ccc;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.trade-con .time-picker span {
+    display: inline-block;
+    padding: 4px 15px;
+    border-radius: 5px;
+    background-color: #ff9f15;
+    color: #fff;
+    cursor:pointer;
+}
+
+.trade-con .time-picker input {
+    vertical-align: top;
+    background: none;
+    cursor: pointer;
+    margin: 0 10px;
+    width: 100px;
+    border: none;
+    border-bottom: solid 1px #ccc;
+    box-shadow: none;
+    border-radius: 0
+}
+
+.betlog-table .table-qk {
+    margin: 0 2% 4%;
+}
+
+.table-qk th {
+    background-color: #eee;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+}
+
+.table-qk td {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+}

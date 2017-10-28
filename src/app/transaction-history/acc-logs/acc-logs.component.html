@@ -1,0 +1,33 @@
+<div class="trade-con clearfix">
+    <div class="time-picker">时间范围<input size="16" type="text" readonly class="form_datetime start-time" placeholder="起始日期">至<input size="16" type="text" readonly class="form_datetime end-time" placeholder="截至日期"><span (click)="queryAccList()">查询</span></div>
+    <div class="betlog-table">
+        <table width="96%" class="table-qk">
+            <tr>
+                <th>记录时间</th>
+                <th>用户名</th>
+                <th>期号</th>
+                <th>当前金额</th>
+                <th>支出</th>
+                <th>收入</th>
+                <th>可用金额</th>
+                <th>备注</th>
+            </tr>
+            <tr *ngIf="!isShow; else showAccList">
+                <td colspan="8">暂时没有数据</td>
+            </tr>
+            <ng-template #showAccList>
+                <tr *ngFor="let item of accList">
+                    <td>{{item.addTime*1000 | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                    <td>{{item.user_name}}</td>
+                    <td>{{item.id}}</td>
+                    <td>{{item.usableAmountBefore}}</td>
+                    <td>{{item.usable<0?item.usable:'0.00'}}</td>
+                    <td>{{item.usable>0?item.usable:'0.00'}}</td>
+                    <td>{{item.usableAmount}}</td>
+                    <td>{{item.intro}}</td>
+                </tr>
+            </ng-template>
+        </table>
+        <app-pagination [totalCount]="totalCount" [changePage]="pageSize" [pageSize]="pageSize" [currentPage]="currentPage" [pageCount]="pageCount" (changeCurrentPage)="getPageData($event)" (changeOption)="getPageData($event)"></app-pagination>
+    </div>
+</div>

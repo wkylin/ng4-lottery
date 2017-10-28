@@ -1,10 +1,10 @@
 <div class="personal-con">
     <h2 class="title">我的信息</h2>
     <div class="mc-con">
-        <p><span class="fLeft">可用余额: {{usableAmount}}</span><span class="fRight">本次登陆时间:2017-09-07</span></p>
-        <p><span class="fLeft">冻结金额: {{frozenAmount}}</span><span class="fRight">本次登陆IP:58.37.21.84</span></p>
-        <p><span class="fLeft">返点:高频:{{maxRebate}} / 低频:{{minRebate}}</span><span class="fRight">上次登录时间:2017-09-07</span></p>
-        <p><span class="fLeft">注册时间:{{addTime | date:'yyyy-MM-dd'}}</span><span class="fRight">上次登陆IP:58.37.21.84</span></p>
+        <p><span class="fl-left">可用余额: {{usableAmount}}</span><span class="fRight">本次登陆时间: {{currentLoginTime | date:'yyyy-MM-dd'}}</span></p>
+        <p><span class="fl-left">冻结金额: {{frozenAmount}}</span><span class="fRight">本次登陆IP: {{currentLoginIp}}</span></p>
+        <p><span class="fl-left">返点:高频: {{maxRebate}} / 低频: {{minRebate}}</span><span class="fRight">上次登录时间: {{lastLoginTime | date:'yyyy-MM-dd'}}</span></p>
+        <p><span class="fl-left">注册时间: {{addTime | date:'yyyy-MM-dd'}}</span><span class="fRight">上次登陆IP: {{lastLoginIp}}</span></p>
     </div>
     <h2 class="title">我的特权</h2>
     <div class="tequan-con">
@@ -21,7 +21,7 @@
 <div class="personal-nav">
     <div class="personal-con">
         <div class="state">
-            <div class="statelist fLeft">
+            <div class="statelist fl-left">
                 <a name="jump"></a>
                 <span class="statespan dl"></span>
                 <div class="jj-con">
@@ -29,46 +29,53 @@
                     <span class="block">建议您使用字母和数字的组合</span>
                 </div>
             </div>
-            <div class="fRight state-btn"><span>修改密码</span></div>
+            <div class="fRight state-btn" (click)="setLoginPwd()"><span>修改密码</span></div>
         </div>
         <div class="state">
-            <div class="statelist fLeft">
+            <div class="statelist fl-left">
                 <span class="statespan zj"></span>
                 <div class="jj-con">
-                    <span>资金密码</span>
+                    <span *ngIf="isBankPwd">已设置资金密码</span>
+                    <span *ngIf="!isBankPwd">资金密码</span>
                 </div>
             </div>
-            <div class="fRight state-btn"><span>修改资金密码</span></div>
+            <div class="fRight state-btn" (click)="setBankPwd()"><span>修改资金密码</span></div>
         </div>
         <div class="state">
-            <div class="statelist fLeft">
+            <div class="statelist fl-left">
                 <span class="statespan yhk"></span>
                 <div class="jj-con">
-                    <span>银行卡</span>
+                    <span *ngIf="isBank">已绑定银行卡：{{bank}}</span>
+                    <span *ngIf="!isBank">银行卡</span>
                 </div>
             </div>
-            <div class="fRight state-btn"><span class="disabled">绑定银行卡</span></div>
+            <div class="fRight state-btn" *ngIf="isBank"><span class="disabled">绑定银行卡</span></div>
+            <div class="fRight state-btn" *ngIf="!isBank"><span (click)="bindBank()">绑定银行卡</span></div>
         </div>
         <div class="state">
-            <div class="statelist fLeft">
+            <div class="statelist fl-left">
                 <span class="statespan yx"></span>
                 <div class="jj-con">
-                    <span>绑定邮箱</span>
+                    <span *ngIf="isEmail">已绑定邮箱：{{email}}</span>
+                    <span *ngIf="!isEmail">绑定邮箱</span>
                 </div>
             </div>
-            <div class="fRight state-btn"><span class="disabled">绑定邮箱</span></div>
+            <div class="fRight state-btn" *ngIf="isEmail"><span class="disabled">绑定邮箱</span></div>
+            <div class="fRight state-btn" *ngIf="!isEmail"><span (click)="bindEmail()">绑定邮箱</span></div>
         </div>
         <div class="state">
-            <div class="statelist fLeft">
+            <div class="statelist fl-left">
                 <span class="statespan sj"></span>
                 <div class="jj-con">
-                    <span>绑定手机</span>
+                    <span *ngIf="isMobile">已绑定手机：{{mobile}}</span>
+                    <span *ngIf="!isMobile">绑定手机</span>
                 </div>
             </div>
-            <div class="fRight state-btn"><span class="disabled">绑定手机</span></div>
+            <div class="fRight state-btn" *ngIf="isMobile"><span class="disabled">绑定手机</span></div>
+            <div class="fRight state-btn" *ngIf="!isMobile"><span (click)="bindMobile()">绑定手机</span></div>
         </div>
         <div class="state">
-            <div class="statelist fLeft">
+            <div class="statelist fl-left">
                 <span class="statespan qq"></span>
                 <div class="jj-con">
                     <span *ngIf="isQQ">已绑定QQ：{{QQ}}</span>

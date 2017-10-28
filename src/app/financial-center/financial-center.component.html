@@ -1,9 +1,9 @@
 <div class="personal-con cw-con">
     <h2 class="title">财务中心</h2>
     <div class="mc-con">
-        <p class="clearfix"><span class="fLeft">可提金额:<strong>103,840.00</strong>元</span></p>
-        <div id="tab1" class="rgTab">
-            <div class="btnTabs clearfix">
+        <p class="clearfix"><span class="fl-left">可提金额:<strong>{{usableAmount}}</strong>元</span></p>
+        <div id="tab1" class="rg-tab">
+            <div class="btb-tabs clearfix">
                 <a [routerLink]="['/personal-center/financial-center/recharge-cash']" routerLinkActive="on" >账户存款</a>
                 <a [routerLink]="['/personal-center/financial-center/withdraw-cash']" routerLinkActive="on">账户提现</a>
             </div>
